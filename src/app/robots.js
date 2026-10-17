@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/siteConfig";
+
 export default function robots() {
   return {
     rules: [
@@ -6,7 +8,7 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://babobhalikare.com/sitemap.xml",
-    host: "https://babobhalikare.com",
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

@@ -1,7 +1,8 @@
 import "./globals.css";
+import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata = {
-  metadataBase: new URL("https://babobhalikare.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Best Dharmshala in Ramdevra | Babo Bhali Kare Singhvi Jain Dharamshala",
     template: "%s | Babo Bhali Kare Dharmshala Ramdevra",
@@ -30,13 +31,13 @@ export const metadata = {
     "बाबो भली करे धर्मशाला",
     "रामदेवरा धर्मशाला बुकिंग"
   ],
-  authors: [{ name: "Babo Bhali Kare Singhvi Jain Dharmshala", url: "https://babobhalikare.com" }],
+  authors: [{ name: "Babo Bhali Kare Singhvi Jain Dharmshala", url: SITE_URL }],
   creator: "Babo Bhali Kare Singhvi Jain Dharmshala",
   publisher: "Babo Bhali Kare Singhvi Jain Dharmshala",
   applicationName: "Babo Bhali Kare Ramdevra",
   category: "Lodging & Travel",
   alternates: {
-    canonical: "https://babobhalikare.com",
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
@@ -53,7 +54,7 @@ export const metadata = {
     title: "Best Dharmshala in Ramdevra | Babo Bhali Kare Singhvi Jain Dharamshala",
     description:
       "Comfortable AC & Non-AC family rooms located just 400m from Baba Ramdevji Samadhi Mandir, Ramdevra. Clean, peaceful & secure stay with car/bus parking & hot water. Call: 9413187706",
-    url: "https://babobhalikare.com",
+    url: SITE_URL,
     siteName: "Babo Bhali Kare Dharmshala Ramdevra",
     images: [
       {
@@ -105,7 +106,7 @@ export default function RootLayout({ children }) {
     "@graph": [
       {
         "@type": ["LodgingBusiness", "Hotel", "LocalBusiness"],
-        "@id": "https://babobhalikare.com/#lodging",
+        "@id": `${SITE_URL}/#lodging`,
         name: "Babo Bhali Kare Singhvi Jain Dharmshala",
         alternateName: [
           "Babo Bhali Kare Dharmshala",
@@ -117,20 +118,20 @@ export default function RootLayout({ children }) {
         ],
         description:
           "Premier budget and family dharmshala in Ramdevra, Rajasthan located just 400 meters from Shree Baba Ramdevji Samadhi Mandir. Features clean AC and Non-AC rooms, 24/7 hot water geysers, secure car/bus parking, lift for elders, and pure vegetarian dining nearby.",
-        url: "https://babobhalikare.com",
+        url: SITE_URL,
         telephone: "+91-9413187706",
         priceRange: "₹₹ (Budget Friendly)",
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, UPI",
         image: [
-          "https://babobhalikare.com/logo.png",
-          "https://babobhalikare.com/images/exterior.jpg",
-          "https://babobhalikare.com/img3.jpeg",
-          "https://babobhalikare.com/img4.jpeg",
-          "https://babobhalikare.com/images/room-ac.jpg",
-          "https://babobhalikare.com/images/room-family.jpg"
+          `${SITE_URL}/logo.png`,
+          `${SITE_URL}/images/exterior.jpg`,
+          `${SITE_URL}/img3.jpeg`,
+          `${SITE_URL}/img4.jpeg`,
+          `${SITE_URL}/images/room-ac.jpg`,
+          `${SITE_URL}/images/room-family.jpg`
         ],
-        logo: "https://babobhalikare.com/logo.png",
+        logo: `${SITE_URL}/logo.png`,
         address: {
           "@type": "PostalAddress",
           streetAddress: "Near Gram Panchayat, Ramdevra - Biramdevra Road",
@@ -237,33 +238,33 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "WebSite",
-        "@id": "https://babobhalikare.com/#website",
-        url: "https://babobhalikare.com",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
         name: "Babo Bhali Kare - Dharmshala in Ramdevra",
         description: "Official portal for Babo Bhali Kare Singhvi Jain Dharmshala in Ramdevra, Rajasthan.",
         inLanguage: "en-IN"
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://babobhalikare.com/#breadcrumb",
+        "@id": `${SITE_URL}/#breadcrumb`,
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://babobhalikare.com"
+            item: SITE_URL
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Dharmshala in Ramdevra",
-            item: "https://babobhalikare.com/#about"
+            item: `${SITE_URL}/#about`
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://babobhalikare.com/#faq",
+        "@id": `${SITE_URL}/#faq`,
         mainEntity: [
           {
             "@type": "Question",
