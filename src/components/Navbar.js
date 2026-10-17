@@ -88,22 +88,18 @@ export default function Navbar({ onOpenBooking }) {
         }}>
           {/* Logo Brand */}
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-            <div style={{
-              width: "48px",
-              height: "48px",
-              borderRadius: "12px",
-              background: "linear-gradient(135deg, #f59e0b, #d97706)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontWeight: 800,
-              fontSize: "1.3rem",
-              boxShadow: "0 4px 12px rgba(217, 119, 6, 0.35)",
-              border: "2px solid #fef3c7"
-            }}>
-              🙏
-            </div>
+            <img
+              src="/logo.png"
+              alt="Babo Bhali Kare Singhvi Jain Dharmshala Ramdevra Logo"
+              style={{
+                width: "52px",
+                height: "52px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                boxShadow: "0 4px 12px rgba(217, 119, 6, 0.25)",
+                border: "2px solid #fef3c7"
+              }}
+            />
             <div>
               <div style={{
                 fontSize: "1.2rem",

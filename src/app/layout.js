@@ -73,6 +73,14 @@ export const metadata = {
       "Clean AC and Non-AC family rooms 400m from Baba Ramdevji Samadhi Mandir, Ramdevra. Free parking, hot water. Helpline: 9413187706.",
     images: ["/images/exterior.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" }
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico"
+  },
   verification: {
     google: "CtMvw2C-4YeWJWP3WIdx5-0mSNoUkkzz-WZlMTG1U-o",
   },
@@ -115,13 +123,14 @@ export default function RootLayout({ children }) {
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, UPI",
         image: [
+          "https://babobhalikare.com/logo.png",
           "https://babobhalikare.com/images/exterior.jpg",
           "https://babobhalikare.com/img3.jpeg",
           "https://babobhalikare.com/img4.jpeg",
           "https://babobhalikare.com/images/room-ac.jpg",
           "https://babobhalikare.com/images/room-family.jpg"
         ],
-        logo: "https://babobhalikare.com/images/exterior.jpg",
+        logo: "https://babobhalikare.com/logo.png",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Near Gram Panchayat, Ramdevra - Biramdevra Road",
@@ -321,6 +330,8 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="geo.region" content="IN-RJ" />
         <meta name="geo.placename" content="Ramdevra, Rajasthan, India" />

@@ -25,19 +25,19 @@ export default function Footer({ onOpenBooking }) {
           
           {/* Brand Info */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-              <div style={{
-                width: "44px",
-                height: "44px",
-                borderRadius: "10px",
-                background: "linear-gradient(135deg, #f59e0b, #d97706)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "1.3rem"
-              }}>
-                🙏
-              </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "16px" }}>
+              <img
+                src="/logo.png"
+                alt="Babo Bhali Kare Singhvi Jain Dharmshala Ramdevra"
+                style={{
+                  width: "56px",
+                  height: "56px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.4)",
+                  border: "2px solid #f59e0b"
+                }}
+              />
               <div>
                 <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fef3c7" }}>
                   Babo Bhali Kare
