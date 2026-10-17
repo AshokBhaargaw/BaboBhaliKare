@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="format-detection" content="telephone=no" />
+        <meta name="google-site-verification" content="CtMvw2C-4YeWJWP3WIdx5-0mSNoUkkzz-WZlMTG1U-o" />
       </head>
       <body>{children}</body>
     </html>
