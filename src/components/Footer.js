@@ -49,7 +49,7 @@ export default function Footer({ onOpenBooking }) {
             </div>
 
             <p style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: 1.6, marginBottom: "16px" }}>
-              Dedicated to serving pilgrims and families visiting the holy shrine of Lord Baba Ramdevji in Ramdevra (Pokhran), Rajasthan. Situated just 400 meters from the temple.
+              Babo Bhali Kare Singhvi Jain Dharamshala is the premier budget and family dharmshala in Ramdevra (Pokhran, Rajasthan). Situated just 400 meters from the sacred Baba Ramdevji Samadhi Mandir with clean AC rooms, 24/7 hot water, lift, and parking.
             </p>
 
             <div style={{ fontSize: "0.82rem", color: "#cbd5e1", lineHeight: 1.5, marginBottom: "16px" }}>

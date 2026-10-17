@@ -23,7 +23,7 @@ export default function AboutSection({ onOpenBooking }) {
             }}>
               <img
                 src="/img4.jpeg"
-                alt="Babo Bhali Kare Singhvi Jain Dharamshala Building Ramdevra"
+                alt="Best Dharmshala in Ramdevra - Babo Bhali Kare Singhvi Jain Dharamshala"
                 style={{ width: "100%", height: "400px", objectFit: "cover" }}
               />
             </div>
@@ -65,7 +65,7 @@ export default function AboutSection({ onOpenBooking }) {
               lineHeight: 1.25,
               marginBottom: "18px"
             }}>
-              About Babo Bhali Kare Singhvi Jain Dharamshala
+              Top-Rated Dharmshala in Ramdevra – Babo Bhali Kare
             </h2>
 
             <p style={{
@@ -74,9 +74,8 @@ export default function AboutSection({ onOpenBooking }) {
               color: "#475569",
               marginBottom: "16px"
             }}>
-              Located near the Gram Panchayat in <strong>Ramdevra (Tehsil Pokaran, District Jaisalmer, Rajasthan)</strong>, 
-              <strong> Babo Bhali Kare Singhvi Jain Dharamshala</strong> is dedicated to providing high-quality, fully air-conditioned, 
-              and budget-friendly stays for devotees of Lord Baba Ramdevji, Jain pilgrims, and families visiting from all across India.
+              Located near Gram Panchayat on the Ramdevra - Biramdevra Road in <strong>Ramdevra (Tehsil Pokaran, District Jaisalmer, Rajasthan)</strong>, 
+              <strong> Babo Bhali Kare Singhvi Jain Dharamshala</strong> is the preferred <strong>dharmshala in Ramdevra</strong> for devotees visiting Baba Ramdevji Samadhi Mandir, Jain pilgrims, and traveling families seeking clean, peaceful, and affordable lodging.
             </p>
 
             {/* Management Banner */}

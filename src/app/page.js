@@ -11,6 +11,7 @@ import TempleGuideSection from "@/components/TempleGuideSection";
 import GallerySection from "@/components/GallerySection";
 import LocationSection from "@/components/LocationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import SeoContentSection from "@/components/SeoContentSection";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
@@ -53,6 +54,9 @@ export default function Home() {
 
       {/* Pilgrim Reviews */}
       <TestimonialsSection />
+
+      {/* Dedicated SEO & Information Section */}
+      <SeoContentSection onOpenBooking={openBooking} />
 
       {/* Frequently Asked Questions */}
       <FaqSection />

@@ -79,10 +79,10 @@ export default function GallerySection() {
             <span>Real Photo Showcase</span>
           </div>
           <h2 className="section-title">
-            Dharamshala Premises & Photo Gallery
+            Photo Gallery – Babo Bhali Kare Dharmshala in Ramdevra
           </h2>
           <p className="section-subtitle">
-            Authentic photographs of the building, official signage, guest rooms, and surroundings in Ramdevra.
+            Authentic photographs of the building, guest rooms, amenities, and surroundings at our dharmshala in Ramdevra.
           </p>
 
           {/* Filter Tabs */}
@@ -155,7 +155,7 @@ export default function GallerySection() {
               <div style={{ position: "relative", height: "240px", overflow: "hidden" }}>
                 <img
                   src={item.src}
-                  alt={item.title}
+                  alt={`${item.title} - Babo Bhali Kare Dharmshala in Ramdevra`}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
                 <div style={{

@@ -40,18 +40,27 @@ export default function Hero({ onOpenBooking }) {
 
         {/* Main Headings */}
         <h1 style={{
-          fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
+          fontSize: "clamp(2rem, 4.8vw, 3.6rem)",
           fontWeight: 800,
           lineHeight: 1.15,
           marginBottom: "16px",
           textShadow: "0 2px 10px rgba(0, 0, 0, 0.6)",
           color: "#ffffff"
         }}>
-          Babo Bhali Kare <span style={{ color: "#fcd34d" }}>Singhvi Jain Dharmshala</span>
+          Best Dharmshala in Ramdevra
+          <span style={{
+            display: "block",
+            color: "#fcd34d",
+            fontSize: "clamp(1.4rem, 3.2vw, 2.3rem)",
+            marginTop: "10px",
+            fontWeight: 700
+          }}>
+            Babo Bhali Kare Singhvi Jain Dharamshala
+          </span>
         </h1>
 
         <p style={{
-          fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+          fontSize: "clamp(1rem, 2.2vw, 1.25rem)",
           fontWeight: 600,
           color: "#fef3c7",
           marginBottom: "20px",
@@ -61,15 +70,16 @@ export default function Hero({ onOpenBooking }) {
         </p>
 
         <p style={{
-          maxWidth: "780px",
+          maxWidth: "800px",
           margin: "0 auto 32px auto",
           fontSize: "1.05rem",
-          lineHeight: 1.6,
+          lineHeight: 1.65,
           color: "#f1f5f9",
           textShadow: "0 1px 4px rgba(0,0,0,0.5)"
         }}>
+          Looking for a clean, comfortable, and peaceful <strong>dharmshala in Ramdevra</strong>? 
           Located near Gram Panchayat, just <strong>400 meters (5 minutes walk)</strong> from the sacred <strong>Baba Ramdevji Samadhi Mandir</strong>. 
-          Fully air-conditioned, clean, and secure family accommodation with 24/7 hot water, large vehicle parking, and warm Rajasthani hospitality.
+          Enjoy fully air-conditioned AC and Non-AC family rooms, 24/7 hot water geysers, secure car/bus parking, elevator for seniors, and warm Rajasthani hospitality.
         </p>
 
         {/* Feature Badges */}

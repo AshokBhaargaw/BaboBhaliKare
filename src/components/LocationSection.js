@@ -17,10 +17,10 @@ export default function LocationSection() {
             <span>Location & Directions</span>
           </div>
           <h2 className="section-title">
-            Address, Google Map & How to Reach
+            Address, Google Map & How to Reach Dharmshala in Ramdevra
           </h2>
           <p className="section-subtitle">
-            Easily accessible by private cars, buses, and trains. Located on the main Ramdevra - Biramdevra Road.
+            Easily accessible by private cars, buses, and trains. Located near Gram Panchayat on the main Ramdevra - Biramdevra Road, just 400m from Baba Ramdevji Samadhi Mandir.
           </p>
         </div>
 

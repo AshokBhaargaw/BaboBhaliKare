@@ -75,7 +75,7 @@ export default function TempleGuideSection() {
             Ramdevra Sacred Shrines & Temple Guide
           </h2>
           <p className="section-subtitle">
-            Staying at Babo Bhali Kare Singhvi Jain Dharamshala places you within easy walking distance of all primary religious and cultural destinations.
+            Staying at Babo Bhali Kare Dharmshala in Ramdevra places you just 400 meters from Baba Ramdev Temple and within easy walking distance of all sacred pilgrimage destinations.
           </p>
         </div>
 

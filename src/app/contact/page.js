@@ -49,7 +49,16 @@ export default function ContactPage() {
             marginBottom: "12px",
             color: "#ffffff"
           }}>
-            Contact & Room Reservation
+            Book Dharmshala in Ramdevra
+            <span style={{
+              display: "block",
+              color: "#fcd34d",
+              fontSize: "clamp(1.3rem, 2.8vw, 2rem)",
+              marginTop: "8px",
+              fontWeight: 700
+            }}>
+              Babo Bhali Kare Contact & Helpline
+            </span>
           </h1>
 
           <p style={{

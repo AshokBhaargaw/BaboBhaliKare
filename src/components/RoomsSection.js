@@ -98,11 +98,12 @@ export default function RoomsSection({ onOpenBooking }) {
             <span>Accommodations & Rates</span>
           </div>
           <h2 className="section-title">
-            Clean & Comfortable Pilgrim Rooms
+            AC & Non-AC Rooms – Dharmshala in Ramdevra
           </h2>
           <p className="section-subtitle">
-            Choose from AC, Non-AC, Family Suites, and Group Halls suited to your travel needs. 
-            For immediate bookings, call directly at <strong>9413187706</strong>.
+            Experience clean, peaceful, and budget-friendly stay options at Babo Bhali Kare Dharmshala in Ramdevra. 
+            Choose from AC Deluxe, Standard Non-AC, Family Suites, and Group Dormitories just 400m from Baba Ramdev Temple. 
+            For direct phone reservations, call <strong>9413187706</strong>.
           </p>
 
           {/* Filter Tabs in English */}
