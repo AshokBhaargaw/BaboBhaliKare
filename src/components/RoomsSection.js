@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Users, Bed, Wind, Droplets, Check, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Users, Bed, Check, Phone, ArrowRight } from "lucide-react";
 
 export default function RoomsSection({ onOpenBooking }) {
   const [filter, setFilter] = useState("all");
@@ -11,92 +11,81 @@ export default function RoomsSection({ onOpenBooking }) {
       id: "ac-deluxe-2",
       category: "ac",
       title: "Deluxe AC Room (2-Bed)",
-      titleHi: "डीलक्स AC कमरा (2 बेड)",
       image: "/images/room-ac.jpg",
-      capacity: "2 - 3 व्यक्ति",
-      bedType: "2 आरामदायक सिंगल / डबल बेड",
-      description: "पूरी तरह वातानुकूलित (AC), स्वच्छ टाइल फर्श, आरामदायक गद्दे, अटैच बाथरूम व 24 घंटे गीज़र गर्म पानी सुविधा।",
+      capacity: "2 - 3 Guests",
+      bedType: "2 Single / 1 Double Bed",
+      description: "Air-conditioned comfort with clean tiled flooring, comfortable mattresses, attached bathroom, and 24/7 hot water geyser.",
       features: [
-        "स्प्लिट AC (Air Conditioner)",
-        "अटैच बाथरूम व वेस्टर्न/इंडियन टॉयलेट",
-        "24x7 गर्म पानी हेतु गीज़र",
-        "ताज़ा एवं स्वच्छ चादरें व तकिये",
-        "मोबाइल चार्जिंग सॉकेट्स",
-        "दैनिक सफाई व हाइजीन"
+        "Split Air Conditioning (AC)",
+        "Attached bathroom with Western / Indian toilet",
+        "24x7 Hot water geyser facility",
+        "Freshly laundered white linens & pillows",
+        "Multiple mobile charging points",
+        "Daily housekeeping & sanitization"
       ],
       popular: true,
-      tag: "सबसे लोकप्रिय"
+      tag: "Most Popular"
     },
     {
       id: "non-ac-standard-2",
       category: "non-ac",
       title: "Standard Non-AC Room (2-Bed)",
-      titleHi: "स्टैंडर्ड नॉन-AC कमरा (2 बेड)",
       image: "/images/room-ac.jpg",
-      capacity: "2 - 3 व्यक्ति",
-      bedType: "2 आरामदायक बेड",
-      description: "किफायती व हवादार कमरा, जिसमें अटैच बाथरूम, हाई स्पीड पंखा/कूलर और गर्म पानी की सुविधा उपलब्ध है।",
+      capacity: "2 - 3 Guests",
+      bedType: "2 Comfortable Beds",
+      description: "Well-ventilated budget room with attached bathroom, high-speed ceiling fan / desert cooler, and hot water supply.",
       features: [
-        "हाई स्पीड पंखा / डेजर्ट कूलर",
-        "अटैच साफ-सुथरा बाथरूम",
-        "गर्म पानी की सुविधा",
-        "धुले हुए लिनेन व बिस्तर",
-        "हवादार खिड़कियां",
-        "किफायती बजट दरें"
+        "High-speed ceiling fan / desert cooler",
+        "Clean attached private bathroom",
+        "Hot water geyser facility",
+        "Clean beds, blankets & pillows",
+        "Large bright windows for natural light",
+        "Affordable pilgrim budget rates"
       ],
       popular: false,
-      tag: "बजट फ्रेंडली"
+      tag: "Budget Friendly"
     },
     {
       id: "family-ac-4",
       category: "family",
-      title: "Super Deluxe Family AC Room (4-Bed)",
-      titleHi: "सुपर डीलक्स फैमिली AC रूम (4 बेड)",
+      title: "Super Deluxe Family AC Suite (4-Bed)",
       image: "/images/room-family.jpg",
-      capacity: "4 - 6 व्यक्ति",
-      bedType: "4 आरामदायक बेड (Family Suite)",
-      description: "बड़े परिवारों के लिए विशेष रूप से डिज़ाइन किया गया विशाल कमरा, जिसमें 4 बड़े बेड और खुला स्पेस है।",
+      capacity: "4 - 6 Guests",
+      bedType: "4 Full-Size Beds (Family Suite)",
+      description: "Spacious suite designed for families and elderly travelers. Ample luggage room, large attached bathroom, and powerful AC.",
       features: [
-        "हाई पावर AC कूलिंग",
-        "4 बड़े आरामदायक बेड",
-        "विशाल अटैच बाथरूम व गीज़र",
-        "सामान रखने हेतु अलमारी व वार्डरोब",
-        "बुजुर्गों व बच्चों के लिए अत्यंत सुविधाजनक",
-        "परिवार के साथ सुरक्षित ठहराव"
+        "High-capacity split air conditioning",
+        "4 comfortable individual beds",
+        "Spacious attached bathroom with geyser",
+        "Storage wardrobe & luggage space",
+        "Extremely convenient for seniors & kids",
+        "Safe and secure family environment"
       ],
       popular: true,
-      tag: "फैमिली के लिए बेस्ट"
+      tag: "Best for Families"
     },
     {
       id: "group-hall",
       category: "hall",
       title: "Yatri Sangh Group Hall / Dormitory",
-      titleHi: "यात्री संघ हॉल / ग्रुप डोर्मिटरी",
       image: "/images/room-family.jpg",
-      capacity: "10 से 30+ यात्री",
-      bedType: "मल्टीपल बेड्स / स्वच्छ गद्दे",
-      description: "पदयात्री संघ, भजन मंडलियों और टूर बसों के बड़े समूहों के लिए सामूहिक ठहराव हेतु बड़ा हॉल।",
+      capacity: "10 to 30+ Pilgrims",
+      bedType: "Multiple Beds & Clean Mattresses",
+      description: "Large community hall designed for padayatri sanghs, tour buses, and bhajan groups traveling together to Ramdevra.",
       features: [
-        "बड़े ग्रुप्स हेतु विशाल जगह",
-        "एकाधिक अलग-अलग स्वच्छ बाथरूम",
-        "कूलर व पंखों की पूरी व्यवस्था",
-        "सत्संग व विश्राम हेतु अनुकूल",
-        "सुरक्षित सामान रखने की जगह",
-        "विशेष रियायती संघ दरें"
+        "Expansive space for large groups",
+        "Multiple separate hygienic bathrooms",
+        "High-speed ceiling fans & coolers",
+        "Ideal for community satsang & rest",
+        "Secure luggage holding area",
+        "Special discounted group / sangh rates"
       ],
       popular: false,
-      tag: "समूह व संघ हेतु"
+      tag: "Group & Sangh Stay"
     }
   ];
 
   const filteredRooms = filter === "all" ? rooms : rooms.filter(r => r.category === filter);
-
-  const handleWhatsAppBooking = (roomTitle) => {
-    const text = encodeURIComponent(
-      `नमस्ते बाबो भली करे धर्मशाला! मुझे "${roomTitle}" के बारे में जानकारी चाहिए और कमरा बुक करना है। कृपया तारीख अनुसार उपलब्धता और किराया बताएं। (संपर्क: 9413187706)`
-    );
-    window.open(`https://wa.me/919413187706?text=${text}`, "_blank");
-  };
 
   return (
     <section id="rooms" style={{ padding: "80px 0", background: "#fbf8f2" }}>
@@ -106,17 +95,17 @@ export default function RoomsSection({ onOpenBooking }) {
         <div className="section-header">
           <div className="section-badge">
             <span>🛏️</span>
-            <span>कक्ष एवं सुइट्स</span>
+            <span>Accommodations & Rates</span>
           </div>
           <h2 className="section-title">
-            स्वच्छ एवं आरामदायक कमरों के विकल्प
+            Clean & Comfortable Pilgrim Rooms
           </h2>
           <p className="section-subtitle">
-            आपकी आवश्यकतानुसार AC, नॉन-AC, फैमिली सुइट तथा बड़े संघों हेतु हॉल उपलब्ध हैं। 
-            कमरा सुरक्षित करने हेतु <strong>9413187706</strong> पर सीधे संपर्क करें।
+            Choose from AC, Non-AC, Family Suites, and Group Halls suited to your travel needs. 
+            For immediate bookings, call directly at <strong>9413187706</strong>.
           </p>
 
-          {/* Filter Tabs */}
+          {/* Filter Tabs in English */}
           <div style={{
             display: "inline-flex",
             flexWrap: "wrap",
@@ -130,11 +119,11 @@ export default function RoomsSection({ onOpenBooking }) {
             border: "1px solid #fed7aa"
           }}>
             {[
-              { id: "all", label: "सभी कमरे (All)" },
-              { id: "ac", label: "AC रूम्स" },
-              { id: "non-ac", label: "नॉन-AC रूम्स" },
-              { id: "family", label: "फैमिली सुइट्स" },
-              { id: "hall", label: "ग्रुप हॉल" },
+              { id: "all", label: "All Rooms" },
+              { id: "ac", label: "AC Deluxe" },
+              { id: "non-ac", label: "Non-AC Standard" },
+              { id: "family", label: "Family Suites" },
+              { id: "hall", label: "Group Halls" },
             ].map(tab => (
               <button
                 key={tab.id}
@@ -214,9 +203,6 @@ export default function RoomsSection({ onOpenBooking }) {
                   <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#1e293b", marginBottom: "4px" }}>
                     {room.title}
                   </h3>
-                  <div style={{ fontSize: "0.92rem", fontWeight: 700, color: "#d97706" }}>
-                    {room.titleHi}
-                  </div>
                 </div>
 
                 {/* Capacity & Bed Info */}
@@ -248,7 +234,7 @@ export default function RoomsSection({ onOpenBooking }) {
                 {/* Amenities List */}
                 <div style={{ marginBottom: "22px", flex: 1 }}>
                   <div style={{ fontSize: "0.82rem", fontWeight: 800, color: "#475569", textTransform: "uppercase", marginBottom: "8px", letterSpacing: "0.05em" }}>
-                    शामिल सुविधाएं:
+                    Room Inclusions:
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "7px" }}>
                     {room.features.map((feat, i) => (
@@ -260,7 +246,7 @@ export default function RoomsSection({ onOpenBooking }) {
                   </div>
                 </div>
 
-                {/* Action CTA Buttons */}
+                {/* Action CTA Buttons (Phone Only - WhatsApp Removed) */}
                 <div style={{
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
@@ -270,24 +256,23 @@ export default function RoomsSection({ onOpenBooking }) {
                 }}>
                   <a
                     href="tel:9413187706"
-                    className="btn btn-secondary"
+                    className="btn btn-primary"
                     style={{
-                      padding: "10px",
-                      fontSize: "0.85rem",
-                      borderColor: "#f59e0b",
-                      color: "#b45309",
-                      background: "#fffbeb"
+                      padding: "11px",
+                      fontSize: "0.88rem",
+                      justifyContent: "center",
+                      fontWeight: 800
                     }}
                   >
-                    <Phone size={14} /> 9413187706
+                    <Phone size={15} /> 9413187706
                   </a>
 
                   <button
-                    onClick={() => handleWhatsAppBooking(room.title)}
-                    className="btn btn-whatsapp"
-                    style={{ padding: "10px", fontSize: "0.85rem" }}
+                    onClick={onOpenBooking}
+                    className="btn btn-secondary"
+                    style={{ padding: "11px", fontSize: "0.88rem", borderColor: "#cbd5e1" }}
                   >
-                    <MessageCircle size={14} /> व्हाट्सएप बुक
+                    Inquire Online
                   </button>
                 </div>
               </div>
@@ -310,19 +295,19 @@ export default function RoomsSection({ onOpenBooking }) {
         }}>
           <div>
             <div style={{ fontWeight: 800, color: "#78350f", marginBottom: "4px" }}>
-              💡 महत्वपूर्ण जानकारी:
+              💡 Booking Policy & Check-in Details:
             </div>
             <div style={{ fontSize: "0.88rem", color: "#64748b" }}>
-              • चेक-इन / चेक-आउट का सामान्य समय प्रातः 10:00 बजे है। • भादवा मेला (Ramdevra Mela) के दौरान अग्रिम बुकिंग हेतु पहले फोन करें: <strong>9413187706</strong>
+              • Standard check-in / check-out is 10:00 AM. • For peak pilgrimage & Ramdevra Mela dates, please call in advance: <strong>9413187706</strong>
             </div>
           </div>
-          <button
-            onClick={onOpenBooking}
+          <a
+            href="tel:9413187706"
             className="btn btn-primary"
-            style={{ padding: "10px 20px" }}
+            style={{ padding: "10px 22px" }}
           >
-            बुकिंग इंक्वायरी भेजें
-          </button>
+            <Phone size={16} /> Call: 9413187706
+          </a>
         </div>
 
       </div>

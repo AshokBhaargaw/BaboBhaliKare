@@ -1,6 +1,7 @@
 "use client";
 
-import { Phone, MessageCircle, MapPin, Mail, Clock, ExternalLink, Heart } from "lucide-react";
+import { Phone, MapPin, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer({ onOpenBooking }) {
   const mapsUrl = "https://maps.app.goo.gl/SAv4aVsNab6Z4j1Q7";
@@ -39,17 +40,22 @@ export default function Footer({ onOpenBooking }) {
               </div>
               <div>
                 <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fef3c7" }}>
-                  बाबो भली करे
+                  Babo Bhali Kare
                 </div>
                 <div style={{ fontSize: "0.82rem", color: "#94a3b8" }}>
-                  सिंहवी जैन धर्मशाला • रामदेवरा
+                  Singhvi Jain Dharamshala • Ramdevra
                 </div>
               </div>
             </div>
 
-            <p style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: 1.6, marginBottom: "20px" }}>
-              श्री बाबा रामदेव जी की पावन धरती रामदेवरा में श्रद्धालुओं एवं तीर्थ यात्रियों के सुखद, स्वच्छ एवं शांत प्रवास हेतु समर्पित। मुख्य मंदिर से मात्र 400 मीटर की दूरी पर स्थित।
+            <p style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: 1.6, marginBottom: "16px" }}>
+              Dedicated to serving pilgrims and families visiting the holy shrine of Lord Baba Ramdevji in Ramdevra (Pokhran), Rajasthan. Situated just 400 meters from the temple.
             </p>
+
+            <div style={{ fontSize: "0.82rem", color: "#cbd5e1", lineHeight: 1.5, marginBottom: "16px" }}>
+              <strong>Society:</strong> Shree Gusai Ashram Samiti & Shree Hari Om Ann-Kshetra Society<br />
+              <strong>Managed by:</strong> Omprakash RajaRam Gusai
+            </div>
 
             <div style={{
               display: "inline-flex",
@@ -64,85 +70,78 @@ export default function Footer({ onOpenBooking }) {
               border: "1px solid rgba(245, 158, 11, 0.3)"
             }}>
               <span>🚩</span>
-              <span>जय बाबारी • बाबो भली करे</span>
+              <span>Jai Babari • Babo Bhali Kare</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 style={{ fontSize: "1.1rem", fontWeight: 800, color: "#ffffff", marginBottom: "18px" }}>
-              महत्वपूर्ण लिंक्स (Quick Links)
+              Quick Links
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px", fontSize: "0.9rem" }}>
               <li>
-                <a href="#about" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • धर्मशाला परिचय (About Us)
-                </a>
+                <Link href="/#about" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • About Dharmshala
+                </Link>
               </li>
               <li>
-                <a href="#rooms" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • कमरे एवं सुइट्स (Rooms & Rates)
-                </a>
+                <Link href="/#rooms" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • Rooms & Accommodations
+                </Link>
               </li>
               <li>
-                <a href="#amenities" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • सुविधाएं (Facilities)
-                </a>
+                <Link href="/#amenities" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • Facilities & Amenities
+                </Link>
               </li>
               <li>
-                <a href="#darshan" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • रामदेवरा दर्शन एवं आरती समय
-                </a>
+                <Link href="/#darshan" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • Ramdevra Darshan & Aarti Guide
+                </Link>
               </li>
               <li>
-                <a href="#gallery" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • फोटो गैलरी (Photo Gallery)
-                </a>
+                <Link href="/#gallery" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • Photo Gallery
+                </Link>
               </li>
               <li>
-                <a href="#location" style={{ color: "#94a3b8", transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#fcd34d"} onMouseOut={e=>e.target.style.color="#94a3b8"}>
-                  • कैसे पहुंचें (Location & Map)
-                </a>
+                <Link href="/#location" style={{ color: "#94a3b8", transition: "color 0.2s" }}>
+                  • Location & Google Map
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" style={{ color: "#fcd34d", fontWeight: 700 }}>
+                  • Contact Page (Call 9413187706)
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* Contact Details (Phone Only) */}
           <div>
             <h4 style={{ fontSize: "1.1rem", fontWeight: 800, color: "#ffffff", marginBottom: "18px" }}>
-              संपर्क सूत्र (Helpline)
+              Booking Helpline
             </h4>
             
-            <div style={{ display: "flex", flexDirection: "column", gap: "14px", fontSize: "0.9rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px", fontSize: "0.9rem" }}>
               <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                <Phone size={18} color="#f59e0b" style={{ flexShrink: 0, marginTop: "2px" }} />
+                <Phone size={20} color="#f59e0b" style={{ flexShrink: 0, marginTop: "2px" }} />
                 <div>
-                  <div style={{ fontSize: "0.78rem", color: "#64748b" }}>सीधा मोबाइल / बुकिंग:</div>
-                  <a href="tel:9413187706" style={{ color: "#fef3c7", fontWeight: 800, fontSize: "1.1rem" }}>
+                  <div style={{ fontSize: "0.8rem", color: "#94a3b8" }}>Direct Mobile & Booking:</div>
+                  <a href="tel:9413187706" style={{ color: "#fef3c7", fontWeight: 800, fontSize: "1.3rem", display: "block" }}>
                     9413187706
                   </a>
+                  <div style={{ fontSize: "0.78rem", color: "#64748b" }}>Omprakash RajaRam Gusai</div>
                 </div>
               </div>
 
               <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                <MessageCircle size={18} color="#25d366" style={{ flexShrink: 0, marginTop: "2px" }} />
-                <div>
-                  <div style={{ fontSize: "0.78rem", color: "#64748b" }}>व्हाट्सएप चैट:</div>
-                  <a
-                    href="https://wa.me/919413187706?text=%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%80%21%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%8B%20%E0%A4%AD%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A5%87%20%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B0%E0%A5%82%E0%A4%AE%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#bbf7d0", fontWeight: 700 }}
-                  >
-                    +91 9413187706 पर मैसेज करें
-                  </a>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                <MapPin size={18} color="#f59e0b" style={{ flexShrink: 0, marginTop: "2px" }} />
+                <MapPin size={20} color="#f59e0b" style={{ flexShrink: 0, marginTop: "2px" }} />
                 <div style={{ color: "#94a3b8", lineHeight: 1.5 }}>
-                  रामदेवरा - बीरमदेवरा रोड (ग्राम पंचायत के सामने), रामदेवरा, पोकरण, जैसलमेर, राजस्थान 345023
+                  Near Gram Panchayat, Ramdevra - Biramdevra Road,<br />
+                  PO:- Ramdevra, Tehsil:- Pokaran,<br />
+                  Dist:- Jaisalmer (Rajasthan) - 345023
                 </div>
               </div>
 
@@ -154,7 +153,7 @@ export default function Footer({ onOpenBooking }) {
                   rel="noopener noreferrer"
                   style={{ color: "#fcd34d", fontWeight: 700 }}
                 >
-                  Google Maps पर धर्मशाला देखें ↗
+                  View on Google Maps ↗
                 </a>
               </div>
             </div>
@@ -171,14 +170,14 @@ export default function Footer({ onOpenBooking }) {
           alignItems: "center",
           flexWrap: "wrap",
           gap: "12px",
-          fontSize: "0.82rem",
+          fontSize: "0.85rem",
           color: "#64748b"
         }}>
           <div>
-            © 2026 बाबो भली करे सिंघवी जैन धर्मशाला (Babo Bhali Kare Singhvi Jain Dharmshala). सर्वाधिकार सुरक्षित।
+            © 2026 Babo Bhali Kare Singhvi Jain Dharamshala, Ramdevra. All Rights Reserved.
           </div>
           <div>
-            हेल्पलाइन: <a href="tel:9413187706" style={{ color: "#f59e0b", fontWeight: 700 }}>9413187706</a> • रामदेवरा (राजस्थान)
+            Official Helpline: <a href="tel:9413187706" style={{ color: "#f59e0b", fontWeight: 700 }}>9413187706</a> • Ramdevra, Rajasthan
           </div>
         </div>
 

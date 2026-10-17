@@ -15,8 +15,6 @@
   --secondary-royal: #1e3a8a;
   --secondary-maroon: #831843;
   --accent-gold: #eab308;
-  --whatsapp-color: #25d366;
-  --whatsapp-hover: #1ebd5a;
 
   --text-primary: #1e293b;
   --text-secondary: #475569;
@@ -187,17 +185,6 @@ img {
   transform: translateY(-2px);
 }
 
-.btn-whatsapp {
-  background-color: var(--whatsapp-color);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-}
-
-.btn-whatsapp:hover {
-  background-color: var(--whatsapp-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-}
 
 .btn-secondary {
   background: #ffffff;

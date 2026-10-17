@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, MessageCircle, Menu, X, MapPin, Clock, ShieldCheck } from "lucide-react";
+import { Phone, Menu, X, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar({ onOpenBooking }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,12 +20,12 @@ export default function Navbar({ onOpenBooking }) {
 
   return (
     <>
-      {/* Top Helpline Bar */}
+      {/* Top Helpline Bar - Phone Only */}
       <div style={{
         background: "linear-gradient(90deg, #78350f, #b45309, #d97706)",
         color: "#ffffff",
-        padding: "6px 0",
-        fontSize: "0.82rem",
+        padding: "7px 0",
+        fontSize: "0.85rem",
         fontWeight: 500,
       }}>
         <div className="container" style={{
@@ -35,44 +36,32 @@ export default function Navbar({ onOpenBooking }) {
           gap: "8px",
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: "5px" }}>
-              🙏 <strong>बाबो भली करे</strong> | श्री बाबा रामदेव जी की पावन धरा रामदेवरा
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              🙏 <strong>Babo Bhali Kare</strong> | Holy Pilgrimage of Ramdevra, Rajasthan
             </span>
-            <span style={{ display: "none", opacity: 0.8 }} className="desktop-tagline">
-              • मंदिर से मात्र 400 मीटर
+            <span style={{ display: "none", opacity: 0.85 }} className="desktop-tagline">
+              • Just 400m from Baba Ramdev Temple
             </span>
           </div>
+
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <span style={{ opacity: 0.9, fontSize: "0.8rem" }}>24/7 Booking Helpline:</span>
             <a
               href="tel:9413187706"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "5px",
+                gap: "6px",
                 color: "#fef3c7",
-                fontWeight: 700,
+                fontWeight: 800,
                 textDecoration: "none",
-                background: "rgba(0,0,0,0.18)",
-                padding: "2px 8px",
-                borderRadius: "4px"
+                background: "rgba(0,0,0,0.22)",
+                padding: "3px 10px",
+                borderRadius: "6px",
+                letterSpacing: "0.02em"
               }}
             >
-              <Phone size={13} /> कॉल: 9413187706
-            </a>
-            <a
-              href="https://wa.me/919413187706?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%8B%20%E0%A4%AD%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A5%87%20%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%98%E0%A4%B5%E0%A5%80%20%E0%A4%9C%E0%A5%88%E0%A4%A8%20%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B0%E0%A5%82%E0%A4%AE%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "5px",
-                color: "#bbf7d0",
-                fontWeight: 600,
-                textDecoration: "none"
-              }}
-            >
-              <MessageCircle size={13} /> WhatsApp
+              <Phone size={13} /> Call: 9413187706
             </a>
           </div>
         </div>
@@ -98,7 +87,7 @@ export default function Navbar({ onOpenBooking }) {
           height: "76px",
         }}>
           {/* Logo Brand */}
-          <a href="#" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
+          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
             <div style={{
               width: "48px",
               height: "48px",
@@ -117,24 +106,24 @@ export default function Navbar({ onOpenBooking }) {
             </div>
             <div>
               <div style={{
-                fontSize: "1.22rem",
+                fontSize: "1.2rem",
                 fontWeight: 800,
                 color: "#78350f",
                 lineHeight: 1.15,
                 letterSpacing: "-0.01em"
               }}>
-                बाबो भली करे
+                Babo Bhali Kare
               </div>
               <div style={{
-                fontSize: "0.82rem",
+                fontSize: "0.8rem",
                 fontWeight: 600,
                 color: "#64748b",
                 letterSpacing: "0.02em"
               }}>
-                सिंहवी जैन धर्मशाला • रामदेवरा
+                Singhvi Jain Dharmshala • Ramdevra
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Nav Items */}
           <nav className="desktop-nav" style={{
@@ -145,28 +134,40 @@ export default function Navbar({ onOpenBooking }) {
             fontWeight: 600,
             color: "#334155"
           }}>
-            <a href="#about" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              परिचय
-            </a>
-            <a href="#rooms" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              कक्ष (Rooms)
-            </a>
-            <a href="#amenities" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              सुविधाएं
-            </a>
-            <a href="#darshan" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              दर्शन गाइड
-            </a>
-            <a href="#gallery" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              तस्वीरें
-            </a>
-            <a href="#location" style={{ transition: "color 0.2s" }} onMouseOver={e=>e.target.style.color="#d97706"} onMouseOut={e=>e.target.style.color="#334155"}>
-              रास्ता & लोकेशन
-            </a>
+            <Link href="/#about" style={{ transition: "color 0.2s" }}>
+              About
+            </Link>
+            <Link href="/#rooms" style={{ transition: "color 0.2s" }}>
+              Rooms & Rates
+            </Link>
+            <Link href="/#amenities" style={{ transition: "color 0.2s" }}>
+              Facilities
+            </Link>
+            <Link href="/#darshan" style={{ transition: "color 0.2s" }}>
+              Darshan Guide
+            </Link>
+            <Link href="/#gallery" style={{ transition: "color 0.2s" }}>
+              Gallery
+            </Link>
+            <Link href="/#location" style={{ transition: "color 0.2s" }}>
+              Location & Map
+            </Link>
+            <Link
+              href="/contact"
+              style={{
+                color: "#b45309",
+                fontWeight: 700,
+                background: "#fef3c7",
+                padding: "6px 12px",
+                borderRadius: "6px"
+              }}
+            >
+              Contact Us
+            </Link>
           </nav>
 
-          {/* Desktop Action Buttons */}
-          <div className="desktop-actions" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          {/* Desktop Action Buttons (Phone Only) */}
+          <div className="desktop-actions" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <a
               href="tel:9413187706"
               className="btn btn-secondary pulse-button"
@@ -174,8 +175,9 @@ export default function Navbar({ onOpenBooking }) {
                 borderColor: "#f59e0b",
                 color: "#b45309",
                 background: "#fef3c7",
-                padding: "10px 16px",
-                fontSize: "0.9rem"
+                padding: "10px 18px",
+                fontSize: "0.92rem",
+                fontWeight: 800
               }}
             >
               <Phone size={16} /> 9413187706
@@ -185,7 +187,7 @@ export default function Navbar({ onOpenBooking }) {
               className="btn btn-primary"
               style={{ padding: "10px 18px", fontSize: "0.9rem" }}
             >
-              रूम बुक करें
+              Book Room
             </button>
           </div>
 
@@ -212,7 +214,7 @@ export default function Navbar({ onOpenBooking }) {
       {mobileMenuOpen && (
         <div style={{
           position: "fixed",
-          top: "108px",
+          top: "110px",
           left: 0,
           right: 0,
           bottom: 0,
@@ -240,50 +242,50 @@ export default function Navbar({ onOpenBooking }) {
               paddingBottom: "12px",
               borderBottom: "1px solid #f1f5f9"
             }}>
-              <span style={{ fontWeight: 700, color: "#92400e" }}>मेन्यू एवं सेवाएं</span>
-              <a href="tel:9413187706" style={{ color: "#d97706", fontWeight: 700, fontSize: "0.9rem" }}>
+              <span style={{ fontWeight: 800, color: "#92400e" }}>Navigation Menu</span>
+              <a href="tel:9413187706" style={{ color: "#d97706", fontWeight: 800, fontSize: "0.95rem" }}>
                 📞 9413187706
               </a>
             </div>
 
-            <nav style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "1.05rem", fontWeight: 600 }}>
-              <a href="#about" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                🏛️ परिचय (About Us)
-              </a>
-              <a href="#rooms" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                🛏️ कमरे एवं हॉल (Rooms & Suites)
-              </a>
-              <a href="#amenities" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                ✨ प्रमुख सुविधाएं (Facilities)
-              </a>
-              <a href="#darshan" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                🚩 रामदेवरा दर्शन गाइड (Darshan Guide)
-              </a>
-              <a href="#gallery" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                📸 फोटो गैलरी (Photo Gallery)
-              </a>
-              <a href="#location" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
-                📍 पता और गूगल मैप (Google Map)
-              </a>
-              <a href="#faqs" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b" }}>
-                ❓ जरूरी सवाल (FAQs)
-              </a>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "1rem", fontWeight: 600 }}>
+              <Link href="/#about" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                🏛️ About Dharmshala
+              </Link>
+              <Link href="/#rooms" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                🛏️ Rooms & Suites
+              </Link>
+              <Link href="/#amenities" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                ✨ Amenities & Facilities
+              </Link>
+              <Link href="/#darshan" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                🚩 Ramdevra Darshan Guide
+              </Link>
+              <Link href="/#gallery" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                📸 Photo Gallery
+              </Link>
+              <Link href="/#location" onClick={closeMenu} style={{ padding: "8px 0", color: "#1e293b", borderBottom: "1px dashed #f1f5f9" }}>
+                📍 Location & Directions
+              </Link>
+              <Link href="/contact" onClick={closeMenu} style={{ padding: "8px 0", color: "#b45309", fontWeight: 700 }}>
+                📞 Contact & Booking (9413187706)
+              </Link>
             </nav>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "10px" }}>
               <a
                 href="tel:9413187706"
                 className="btn btn-primary"
-                style={{ width: "100%", justifyContent: "center" }}
+                style={{ width: "100%", justifyContent: "center", fontSize: "1.05rem", padding: "14px" }}
               >
-                <Phone size={18} /> सीधे कॉल करें (9413187706)
+                <Phone size={18} /> Call Directly: 9413187706
               </a>
               <button
                 onClick={() => { closeMenu(); onOpenBooking(); }}
                 className="btn btn-secondary"
                 style={{ width: "100%", justifyContent: "center", borderColor: "#d97706", color: "#b45309" }}
               >
-                कमरे की जानकारी / बुकिंग इंक्वायरी
+                Room Availability Inquiry
               </button>
             </div>
           </div>
@@ -291,7 +293,7 @@ export default function Navbar({ onOpenBooking }) {
       )}
 
       <style jsx>{`
-        @media (max-width: 900px) {
+        @media (max-width: 960px) {
           .desktop-nav,
           .desktop-actions {
             display: none !important;

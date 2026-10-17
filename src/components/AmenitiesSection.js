@@ -18,63 +18,53 @@ export default function AmenitiesSection() {
   const amenities = [
     {
       icon: <MapPin size={26} color="#d97706" />,
-      title: "मंदिर से मात्र 400 मीटर",
-      titleEn: "Walking Distance to Temple",
-      desc: "मुख्य श्री बाबा रामदेव जी समाधि मंदिर तक पैदल केवल 5 मिनट का सीधा और सुगम रास्ता।"
+      title: "400m to Temple",
+      desc: "Only a 5-minute direct walking distance to the sacred Baba Ramdevji Samadhi Mandir."
     },
     {
       icon: <Flame size={26} color="#d97706" />,
-      title: "24 घंटे गर्म व ठंडा पानी",
-      titleEn: "24/7 Hot Water & Geyser",
-      desc: "स्नान हेतु आधुनिक वॉटर हीटर व गीज़र की निरंतर 24 घंटे उपलब्धता।"
+      title: "24/7 Hot & Cold Water",
+      desc: "Modern water heaters & geysers installed in all bathrooms for round-the-clock hot water."
     },
     {
       icon: <Car size={26} color="#d97706" />,
-      title: "विशाल सुरक्षित पार्किंग",
-      titleEn: "Spacious & Safe Parking",
-      desc: "कारों, बसों व निजी गाड़ियों को धर्मशाला परिसर में सुरक्षित खड़ा करने की पर्याप्त जगह।"
+      title: "Spacious Secure Parking",
+      desc: "Large secured on-premises parking space for pilgrim cars, traveler vans, and tour buses."
     },
     {
       icon: <GlassWater size={26} color="#d97706" />,
-      title: "RO शुद्ध पेयजल",
-      titleEn: "RO Purified Cold Water",
-      desc: "यात्रियों के स्वास्थ्य हेतु स्वच्छ, ठंडा और शुद्ध RO फिल्टर वाटर की सुविधा।"
+      title: "RO Purified Cold Water",
+      desc: "Continuous supply of chilled and hygienic reverse osmosis (RO) drinking water for guests."
     },
     {
       icon: <ArrowUpSquare size={26} color="#d97706" />,
-      title: "लिफ्ट (Elevator) सुविधा",
-      titleEn: "Lift Facility for Yatris",
-      desc: "वरिष्ठ नागरिकों, बुजुर्गों एवं बच्चों के लिए ऊपरी मंजिलों तक सुगम आवागमन।"
+      title: "Elevator / Lift Facility",
+      desc: "Smooth elevator access to upper floor rooms, especially convenient for elderly pilgrims."
     },
     {
       icon: <UtensilsCrossed size={26} color="#d97706" />,
-      title: "शुद्ध शाकाहारी भोजनालय",
-      titleEn: "Pure Veg & Jain Food",
-      desc: "परिसर के पास में ही शुद्ध सात्विक, मारवाड़ी एवं जैन भोजनशाला की उत्तम व्यवस्था।"
+      title: "Pure Vegetarian Bhojanshala",
+      desc: "Hygienic pure vegetarian, Marwari, and Jain dining facilities located right next door."
     },
     {
       icon: <ShieldCheck size={26} color="#d97706" />,
-      title: "24x7 CCTV निगरानी",
-      titleEn: "CCTV & Security",
-      desc: "यात्रियों और उनके सामान की सुरक्षा हेतु चौबीसों घंटे सुरक्षा कर्मी व कैमरे सक्रिय।"
+      title: "24x7 CCTV Surveillance",
+      desc: "Continuous security cameras and attentive on-site management for pilgrim peace of mind."
     },
     {
       icon: <Zap size={26} color="#d97706" />,
-      title: "पावर बैकअप सुविधा",
-      titleEn: "Power Backup",
-      desc: "विद्युत कटौती के दौरान भी पंखों, लाइटों और आवश्यक सेवाओं हेतु जनरेटर बैकअप।"
+      title: "Power Backup",
+      desc: "Reliable power backup generator ensuring uninterrupted lighting and cooling fans."
     },
     {
       icon: <Luggage size={26} color="#d97706" />,
-      title: "लगेज स्टोरेज रूम",
-      titleEn: "Luggage Storage",
-      desc: "दर्शन के समय या जल्दी आने / देर से जाने पर सामान सुरक्षित रखने की व्यवस्था।"
+      title: "Luggage Storage Space",
+      desc: "Safe holding area for your bags if you arrive early or wish to visit the temple after check-out."
     },
     {
       icon: <Sparkles size={26} color="#d97706" />,
-      title: "दैनिक हाइजीन व सफाई",
-      titleEn: "Daily Sanitization & Hygiene",
-      desc: "कमरों और प्रांगण की प्रतिदिन नियमपूर्वक फिनाइल व डेटॉल से डीप क्लीनिंग।"
+      title: "Daily Housekeeping",
+      desc: "Meticulous daily room cleaning and sanitization with fresh linens and towels."
     }
   ];
 
@@ -82,17 +72,17 @@ export default function AmenitiesSection() {
     <section id="amenities" style={{ padding: "80px 0", background: "#ffffff" }}>
       <div className="container">
         
-        {/* Header */}
+        {/* Header in English */}
         <div className="section-header">
           <div className="section-badge">
             <span>✨</span>
-            <span>सर्वोत्तम सुविधाएं</span>
+            <span>Hospitality & Facilities</span>
           </div>
           <h2 className="section-title">
-            यात्रियों के सुखद व आरामदायक प्रवास हेतु व्यवस्था
+            Key Amenities for a Comfortable Pilgrimage
           </h2>
           <p className="section-subtitle">
-            बाबो भली करे सिंघवी जैन धर्मशाला में आपकी हर धार्मिक यात्रा को सुखद, सुरक्षित और यादगार बनाने के लिए सभी आवश्यक सुविधाएं उपलब्ध हैं।
+            Babo Bhali Kare Singhvi Jain Dharmshala provides all the essential comforts to make your pilgrimage peaceful, hygienic, and memorable.
           </p>
         </div>
 
@@ -140,12 +130,9 @@ export default function AmenitiesSection() {
               </div>
 
               <div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, color: "#1e293b", marginBottom: "2px" }}>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, color: "#1e293b", marginBottom: "6px" }}>
                   {item.title}
                 </h3>
-                <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#b45309", textTransform: "uppercase", letterSpacing: "0.03em", marginBottom: "8px" }}>
-                  {item.titleEn}
-                </div>
                 <p style={{ fontSize: "0.88rem", color: "#64748b", lineHeight: 1.55 }}>
                   {item.desc}
                 </p>
@@ -171,10 +158,10 @@ export default function AmenitiesSection() {
         }}>
           <div>
             <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#fef3c7", marginBottom: "6px" }}>
-              क्या आप बड़े यात्री संघ या परिवार के साथ आ रहे हैं?
+              Traveling with a Family or Large Pilgrim Group?
             </div>
             <p style={{ fontSize: "0.95rem", opacity: 0.9, maxWidth: "600px" }}>
-              विशेष हॉल, पार्किंग व्यवस्था एवं भोजन संबंधी किसी भी परामर्श के लिए हमारे केयरटेकर से सीधे बात करें।
+              Speak directly with our manager for hall arrangements, parking coordination, and meal details.
             </p>
           </div>
           <a
@@ -190,7 +177,7 @@ export default function AmenitiesSection() {
             }}
           >
             <Phone size={18} color="#78350f" />
-            <span>फोन करें: 9413187706</span>
+            <span>Call Us: 9413187706</span>
           </a>
         </div>
 

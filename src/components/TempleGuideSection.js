@@ -1,81 +1,81 @@
 "use client";
 
-import { Clock, MapPin, Compass, Sparkles, Navigation } from "lucide-react";
+import { Clock, MapPin, Compass, Sparkles } from "lucide-react";
 
 export default function TempleGuideSection() {
   const darshanPlaces = [
     {
-      name: "श्री बाबा रामदेव जी समाधि मंदिर",
-      nameEn: "Main Baba Ramdevji Temple",
-      distance: "धर्मशाला से 400 मीटर (5 मिनट)",
-      desc: "बाबा रामसापीर की दिव्य जीवित समाधि, स्वर्ण कलश व अखंड ज्योत के पावन दर्शन। देश भर से लाखों श्रद्धालु यहां शीश नवाते हैं।",
-      highlight: "मुख्य मंदिर",
+      name: "Shree Baba Ramdevji Samadhi Mandir",
+      nameEn: "Main Temple (Runicha Dham)",
+      distance: "400 meters (5 min walk)",
+      desc: "The sacred living samadhi of Lord Baba Ramdevji (Ramapir). Devotees from all over India visit to seek divine blessings and offer prayers.",
+      highlight: "Main Sacred Shrine",
       icon: "🚩"
     },
     {
-      name: "रामसरोवर तालाब (Ramsar Sarovar)",
-      nameEn: "Sacred Holy Lake",
-      distance: "धर्मशाला से 800 मीटर",
-      desc: "बाबा रामदेव जी द्वारा निर्मित विशाल पवित्र सरोवर। मान्यता है कि इसके जल में आचमन व स्नान से समस्त चर्मरोग व कष्ट दूर होते हैं।",
-      highlight: "पवित्र स्नान",
+      name: "Ramsar Sarovar (Holy Lake)",
+      nameEn: "Sacred Pilgrimage Lake",
+      distance: "800 meters from Dharmshala",
+      desc: "The historic holy lake constructed by Baba Ramdevji. Devotees take holy bath and sip the sacred water for spiritual wellness.",
+      highlight: "Holy Bathing",
       icon: "🌊"
     },
     {
-      name: "परचा बावड़ी (Parcha Bavdi)",
-      nameEn: "Miraculous Stepwell",
-      distance: "धर्मशाला से 600 मीटर",
-      desc: "ऐतिहासिक बावड़ी जहां बाबा रामदेव जी ने मक्का-मदीना से आए पीरों को उनके अपने कटोरे में खीर खिलाकर परचा (चमत्कार) दिखाया था।",
-      highlight: "चमत्कार स्थल",
+      name: "Parcha Baori (Miraculous Stepwell)",
+      nameEn: "Historic Stepwell",
+      distance: "600 meters from Dharmshala",
+      desc: "The historic stepwell where Lord Baba Ramdevji performed miracles ('Parcha') for the five Pirs who visited from Mecca-Medina.",
+      highlight: "Miracle Spot",
       icon: "🏛️"
     },
     {
-      name: "गुरु बालीनाथ जी का धूणा",
-      nameEn: "Guru Balinathji Dhuna",
-      distance: "धर्मशाला से 1.5 किमी",
-      desc: "बाबा रामदेव जी के पूज्य गुरु योगी बालीनाथ जी की तपोभूमि, जहां अखंड धूणा प्रज्वलित रहता है और भैरव वध की कथा जुड़ी है।",
-      highlight: "तपोभूमि",
+      name: "Guru Balinathji Dhuna",
+      nameEn: "Sacred Penance Site",
+      distance: "1.5 km from Dharmshala",
+      desc: "The penance shrine of Guru Yogi Balinathji, spiritual preceptor of Baba Ramdevji, where the holy eternal fire (Dhuna) is kept burning.",
+      highlight: "Guru Dhuna",
       icon: "🔥"
     },
     {
-      name: "डाली बाई की समाधि व पत्थर कंगन",
-      nameEn: "Dali Bai Samadhi & Kangan",
-      distance: "मुख्य मंदिर प्रांगण में स्थित",
-      desc: "बाबा की अनन्य भक्त बहिन डाली बाई की समाधि। यहां स्थित पत्थर के कंगन के नीचे से निकलने पर मनोकामना पूर्ण होने की मान्यता है।",
-      highlight: "कंगन परिक्रमा",
+      name: "Dali Bai Samadhi & Sacred Kangan",
+      nameEn: "Devotee Dali Bai Shrine",
+      distance: "Inside Main Temple Compound",
+      desc: "Shrine of devout sister Dali Bai. Pilgrims perform pradakshina and pass beneath the stone kangan for good health and blessings.",
+      highlight: "Stone Kangan",
       icon: "✨"
     },
     {
-      name: "ऐतिहासिक पोकरण फोर्ट (Pokhran Fort)",
-      nameEn: "Pokhran Heritage Fort",
-      distance: "रामदेवरा से 12 किमी",
-      desc: "14वीं शताब्दी का ऐतिहासिक लाल व पीले बलुआ पत्थर का दुर्ग, संग्रहालय तथा बाबा के बाल्यकाल से जुड़ी अनेक स्मृतियां।",
-      highlight: "पर्यटन स्थल",
+      name: "Historic Pokhran Fort",
+      nameEn: "14th Century Heritage Fort",
+      distance: "12 km from Ramdevra",
+      desc: "Historical red and yellow sandstone fort in Pokhran with royal museum, rich history, and spiritual connections with Baba's youth.",
+      highlight: "Sightseeing",
       icon: "🏰"
     }
   ];
 
   const aartiSchedule = [
-    { time: "प्रातः 05:00 AM", name: "मंगला आरती", note: "प्रातः काल प्रथम दर्शन" },
-    { time: "दोपहर 12:00 PM", name: "भोग आरती", note: "ठाकुर जी को राजभोग अर्पण" },
-    { time: "सायं 07:00 PM", name: "संध्या आरती", note: "भव्य दीप व झांझ दर्शन" },
-    { time: "रात्रि 09:30 PM", name: "शयन आरती", note: "रात्रि अंतिम आरती व शयन" }
+    { time: "05:00 AM", name: "Mangla Aarti", note: "First morning darshan and prayers" },
+    { time: "12:00 PM", name: "Bhog Aarti", note: "Midday sacred food offering to the deity" },
+    { time: "07:00 PM", name: "Sandhya Aarti", note: "Grand evening aarti with holy lamps & cymbals" },
+    { time: "09:30 PM", name: "Shayan Aarti", note: "Night closing aarti before temple rest" }
   ];
 
   return (
     <section id="darshan" style={{ padding: "80px 0", background: "#fbf8f2" }}>
       <div className="container">
         
-        {/* Header */}
+        {/* Header in English */}
         <div className="section-header">
           <div className="section-badge">
             <span>🚩</span>
-            <span>रामदेवरा तीर्थ दर्शन</span>
+            <span>Pilgrim Darshan Guide</span>
           </div>
           <h2 className="section-title">
-            रामदेवरा के पवित्र तीर्थ स्थल एवं दर्शन गाइड
+            Ramdevra Sacred Shrines & Temple Guide
           </h2>
           <p className="section-subtitle">
-            हमारी धर्मशाला से सभी प्रमुख धार्मिक व दर्शनीय स्थल बेहद नजदीक हैं, जिससे आप व आपका परिवार बिना किसी असुविधा के आसानी से दर्शन कर सकते हैं।
+            Staying at Babo Bhali Kare Singhvi Jain Dharamshala places you within easy walking distance of all primary religious and cultural destinations.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function TempleGuideSection() {
             <div style={{ position: "relative", height: "260px" }}>
               <img
                 src="/images/ramdevra-mandir.jpg"
-                alt="Baba Ramdev Temple Ramdevra"
+                alt="Baba Ramdevji Samadhi Mandir Ramdevra"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
               <div style={{
@@ -115,21 +115,21 @@ export default function TempleGuideSection() {
                 justifyContent: "space-between"
               }}>
                 <span style={{ fontWeight: 700, fontSize: "0.95rem" }}>
-                  📍 पैदल दूरी: मात्र 400 मीटर
+                  📍 Walking Distance: 400 Meters
                 </span>
                 <span style={{ color: "#fcd34d", fontSize: "0.85rem", fontWeight: 700 }}>
-                  5 मिनट वॉक
+                  5 Min Walk
                 </span>
               </div>
             </div>
 
             <div style={{ padding: "26px" }}>
               <h3 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#78350f", marginBottom: "8px" }}>
-                श्री रामदेव जी समाधि मंदिर (रुणिचा धाम)
+                Baba Ramdevji Samadhi Mandir (Runicha)
               </h3>
               <p style={{ fontSize: "0.92rem", color: "#475569", lineHeight: 1.6, marginBottom: "20px" }}>
-                कलियुग के अवतारी बाबा रामसापीर का यह मंदिर सामाजिक समरसता और हिंदू-मुस्लिम एकता का अनुपम प्रतीक है। 
-                हमारी धर्मशाला से मंदिर का मार्ग सीधा, पक्का और चौड़ा है, जिससे वरिष्ठ जनों के लिए सुबह-शाम दर्शन करना बेहद सुगम रहता है।
+                The sacred living samadhi of Lord Baba Ramdevji is one of western India's most venerated pilgrimage centers. 
+                The road from our Dharmshala to the temple is paved, well-lit, and level, allowing senior citizens and families to visit comfortably at any time.
               </p>
 
               <div style={{
@@ -139,10 +139,10 @@ export default function TempleGuideSection() {
                 border: "1px solid #fde68a"
               }}>
                 <div style={{ fontSize: "0.85rem", fontWeight: 800, color: "#92400e", marginBottom: "6px" }}>
-                  ✨ यात्री टिप:
+                  ✨ Pilgrim Tip:
                 </div>
                 <div style={{ fontSize: "0.82rem", color: "#78350f", lineHeight: 1.5 }}>
-                  मंगला आरती (सुबह 5 बजे) व संध्या आरती (शाम 7 बजे) के समय विशेष आनंद रहता है। धर्मशाला में ठहरने से आप समय पर आरती में शामिल हो सकते हैं।
+                  Attending the morning Mangla Aarti (5:00 AM) or the evening Sandhya Aarti (7:00 PM) offers a deeply serene experience. Because our Dharmshala is so close, you can easily attend both without hurry.
                 </div>
               </div>
             </div>
@@ -173,10 +173,10 @@ export default function TempleGuideSection() {
               </div>
               <div>
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#1e293b" }}>
-                  मंदिर आरती समय-सारणी
+                  Daily Temple Aarti Schedule
                 </h3>
                 <div style={{ fontSize: "0.82rem", color: "#64748b" }}>
-                  दैनिक नियमित दर्शन व आरती का समय
+                  Standard daily prayer and darshan timings
                 </div>
               </div>
             </div>
@@ -226,14 +226,14 @@ export default function TempleGuideSection() {
               color: "#1e40af",
               lineHeight: 1.5
             }}>
-              <strong>नोट:</strong> भादवा शुक्ल द्वितीया से एकादशी (वार्षिक मेला) के दौरान मंदिर कपाट 24 घंटे खुले रहते हैं।
+              <strong>Note:</strong> During the annual Ramdevra Fair (Bhadon Shukla Dwitiya to Ekadashi), the temple gates remain open 24 hours for continuous darshan.
             </div>
           </div>
         </div>
 
         {/* Other Darshan Spots */}
         <h3 style={{ fontSize: "1.45rem", fontWeight: 800, color: "#1e293b", marginBottom: "20px", textAlign: "center" }}>
-          रामदेवरा एवं आस-पास के प्रमुख दर्शनीय स्थल
+          Nearby Holy Places & Local Sightseeing
         </h3>
 
         <div style={{
@@ -269,10 +269,10 @@ export default function TempleGuideSection() {
                 </span>
               </div>
 
-              <h4 style={{ fontSize: "1.1rem", fontWeight: 800, color: "#1e293b", marginTop: "4px" }}>
+              <h4 style={{ fontSize: "1.08rem", fontWeight: 800, color: "#1e293b", marginTop: "4px" }}>
                 {place.name}
               </h4>
-              <p style={{ fontSize: "0.85rem", color: "#64748b", lineHeight: 1.55 }}>
+              <p style={{ fontSize: "0.86rem", color: "#64748b", lineHeight: 1.55 }}>
                 {place.desc}
               </p>
             </div>

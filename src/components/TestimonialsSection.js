@@ -1,36 +1,36 @@
 "use client";
 
-import { Star, CheckCircle, Quote } from "lucide-react";
+import { Star, CheckCircle } from "lucide-react";
 
 export default function TestimonialsSection() {
   const reviews = [
     {
-      name: "कमलेश सिंघवी (अहमदाबाद)",
-      stay: "परिवार सहित 3 दिन का प्रवास",
+      name: "Kamlesh Singhvi (Ahmedabad)",
+      stay: "Family 3-Day Pilgrimage",
       rating: 5,
-      date: "हाल ही का प्रवास",
-      comment: "रामदेवरा में बाबा रामदेव जी के दर्शन हेतु यह सर्वोत्तम धर्मशाला है। मंदिर से मात्र 5 मिनट की पैदल दूरी पर है। कमरे बहुत साफ और गीज़र की सुविधा बहुत अच्छी थी। स्टाफ का व्यवहार बहुत विनम्र है।"
+      date: "Recent Stay",
+      comment: "Best dharamshala experience in Ramdevra! Just a 5-minute walk to Baba Ramdevji temple. The AC rooms are spotless and the 24-hour hot water geyser worked perfectly. The staff was polite and helpful."
     },
     {
-      name: "राजेश भाई पटेल (सूरत)",
-      stay: "AC फैमिली रूम में प्रवास",
+      name: "Rajesh Patel (Surat)",
+      stay: "Family AC Suite",
       rating: 5,
-      date: "गत माह",
-      comment: "कार पार्किंग की बहुत बढ़िया व सुरक्षित जगह है। बुजुर्ग माता-पिता साथ थे, मंदिर निकट होने के कारण वे सुबह-शाम दोनों समय आरती में शामिल हो सके। शुद्ध और सात्विक वातावरण।"
+      date: "Last Month",
+      comment: "Excellent parking space for our car inside the boundary. We traveled with our elderly parents, and the proximity to the temple made it possible for them to attend both morning and evening aartis comfortably."
     },
     {
-      name: "मुकेश ओझा (जोधपुर)",
-      stay: "2-बेड डीलक्स रूम",
+      name: "Mukesh Ojha (Jodhpur)",
+      stay: "Deluxe 2-Bed Room",
       rating: 5,
-      date: "तीर्थ यात्रा",
-      comment: "हमने 9413187706 पर फोन करके पहले ही कमरा बुक करवा लिया था। पहुंचने पर तुरंत कमरा मिल गया। पानी, बिस्तर और बाथरूम सभी बिल्कुल स्वच्छ थे। बाबो भली करे!"
+      date: "Religious Trip",
+      comment: "We called 9413187706 in advance and our room was ready upon arrival. Clean sheets, working AC, and peaceful surroundings. Babo Bhali Kare!"
     },
     {
-      name: "दिनेश जैन (जयपुर)",
-      stay: "यात्री संघ ग्रुप स्टे",
+      name: "Dinesh Jain (Jaipur)",
+      stay: "Yatri Sangh Group Stay",
       rating: 5,
-      date: "संघ यात्रा",
-      comment: "हमारे 20 लोगों के संघ के लिए हॉल और कमरों की बहुत सुंदर व्यवस्था की गई। पास में ही जैन भोजनशाला की सुविधा भी मिल गई। सभी सहयात्रियों ने प्रशंसा की।"
+      date: "Community Group",
+      comment: "Our group of 20 pilgrims was accommodated with great care. The hall and multiple bathrooms were very clean. Pure vegetarian Jain food was easily accessible nearby. Highly recommended!"
     }
   ];
 
@@ -38,17 +38,17 @@ export default function TestimonialsSection() {
     <section style={{ padding: "80px 0", background: "#ffffff" }}>
       <div className="container">
         
-        {/* Header */}
+        {/* Header in English */}
         <div className="section-header">
           <div className="section-badge">
             <span>⭐</span>
-            <span>यात्रियों के अनुभव</span>
+            <span>Pilgrim Experiences</span>
           </div>
           <h2 className="section-title">
-            श्रद्धालुओं और परिवारों का विश्वास
+            Trusted by Devotees & Families
           </h2>
           <p className="section-subtitle">
-            रामदेवरा पधारे तीर्थ यात्रियों एवं परिवारों के अनुभव, जिन्होंने हमारे आतिथ्य और स्वच्छता को सराहा।
+            Read real feedback from pilgrims and travelers who stayed at Babo Bhali Kare Singhvi Jain Dharamshala.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
                   alignItems: "center",
                   gap: "4px"
                 }}>
-                  <CheckCircle size={14} /> सत्यापित यात्री
+                  <CheckCircle size={14} /> Verified Guest
                 </div>
               </div>
             </div>

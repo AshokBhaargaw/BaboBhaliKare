@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, Users, Home, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { Calendar, Users, Home, Phone, ArrowRight } from "lucide-react";
 
 export default function QuickBookingBar() {
   const [checkIn, setCheckIn] = useState("");
@@ -11,10 +11,7 @@ export default function QuickBookingBar() {
 
   const handleInquiry = (e) => {
     e.preventDefault();
-    const message = encodeURIComponent(
-      `नमस्ते बाबो भली करे धर्मशाला रामदेवरा! मुझे कमरा बुक करना है:\n- चेक-इन तारीख: ${checkIn || "जल्द से जल्द"}\n- चेक-आउट तारीख: ${checkOut || "1 दिन"}\n- रूम टाइप: ${roomType}\n- यात्रियों की संख्या: ${guests}\nकृपया उपलब्धता और किराया बताएं। धन्यवाद!`
-    );
-    window.open(`https://wa.me/919413187706?text=${message}`, "_blank");
+    window.location.href = "tel:9413187706";
   };
 
   return (
@@ -45,11 +42,11 @@ export default function QuickBookingBar() {
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <span style={{ fontSize: "1.2rem" }}>🗓️</span>
             <span style={{ fontWeight: 800, color: "#78350f", fontSize: "1.05rem" }}>
-              त्वरित कमरा उपलब्धता एवं किराया जांचें
+              Quick Room Availability & Booking Inquiry
             </span>
           </div>
-          <div style={{ fontSize: "0.85rem", color: "#64748b" }}>
-            सीधा संपर्क नंबर: <a href="tel:9413187706" style={{ color: "#d97706", fontWeight: 700 }}>9413187706</a>
+          <div style={{ fontSize: "0.9rem", color: "#64748b" }}>
+            Helpline: <a href="tel:9413187706" style={{ color: "#d97706", fontWeight: 800, fontSize: "1rem" }}>9413187706</a>
           </div>
         </div>
 
@@ -62,55 +59,51 @@ export default function QuickBookingBar() {
           {/* Check-in */}
           <div>
             <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "6px" }}>
-              चेक-इन तारीख (Check-in)
+              Check-in Date
             </label>
-            <div style={{ position: "relative" }}>
-              <input
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.92rem",
-                  color: "#1e293b",
-                  outline: "none",
-                  background: "#f8fafc"
-                }}
-              />
-            </div>
+            <input
+              type="date"
+              value={checkIn}
+              onChange={(e) => setCheckIn(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "12px 14px",
+                borderRadius: "10px",
+                border: "1px solid #cbd5e1",
+                fontSize: "0.92rem",
+                color: "#1e293b",
+                outline: "none",
+                background: "#f8fafc"
+              }}
+            />
           </div>
 
           {/* Check-out */}
           <div>
             <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "6px" }}>
-              चेक-आउट तारीख (Check-out)
+              Check-out Date
             </label>
-            <div style={{ position: "relative" }}>
-              <input
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.92rem",
-                  color: "#1e293b",
-                  outline: "none",
-                  background: "#f8fafc"
-                }}
-              />
-            </div>
+            <input
+              type="date"
+              value={checkOut}
+              onChange={(e) => setCheckOut(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "12px 14px",
+                borderRadius: "10px",
+                border: "1px solid #cbd5e1",
+                fontSize: "0.92rem",
+                color: "#1e293b",
+                outline: "none",
+                background: "#f8fafc"
+              }}
+            />
           </div>
 
           {/* Room Type */}
           <div>
             <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "6px" }}>
-              कमरे का प्रकार (Room Type)
+              Room Category
             </label>
             <select
               value={roomType}
@@ -127,17 +120,17 @@ export default function QuickBookingBar() {
                 cursor: "pointer"
               }}
             >
-              <option value="Deluxe AC Room (2-Bed)">डीलक्स AC कमरा (2 बेड)</option>
-              <option value="Standard Non-AC Room (2-Bed)">नॉन-AC कमरा (2 बेड)</option>
-              <option value="Family Suite AC (4-Bed)">फैमिली सुइट AC (4 बेड)</option>
-              <option value="Yatri Group Hall / Dormitory">यात्री संघ हॉल / ग्रुप स्टे</option>
+              <option value="Deluxe AC Room (2-Bed)">Deluxe AC Room (2-Bed)</option>
+              <option value="Standard Non-AC Room (2-Bed)">Standard Non-AC Room (2-Bed)</option>
+              <option value="Super Deluxe Family AC (4-Bed)">Super Deluxe Family AC (4-Bed)</option>
+              <option value="Yatri Sangh Group Hall / Dormitory">Yatri Sangh Group Hall / Dormitory</option>
             </select>
           </div>
 
           {/* Guests */}
           <div>
             <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "6px" }}>
-              यात्रियों की संख्या (Guests)
+              Number of Guests
             </label>
             <select
               value={guests}
@@ -154,17 +147,17 @@ export default function QuickBookingBar() {
                 cursor: "pointer"
               }}
             >
-              <option value="1-2 Persons">1 - 2 यात्री (Family / Couple)</option>
-              <option value="3-4 Persons">3 - 4 यात्री (Small Family)</option>
-              <option value="5-8 Persons">5 - 8 यात्री (Large Family)</option>
-              <option value="10+ Persons Group">10+ यात्री (Group / Sangh)</option>
+              <option value="1-2 Persons">1 - 2 Guests (Family / Couple)</option>
+              <option value="3-4 Persons">3 - 4 Guests (Small Family)</option>
+              <option value="5-8 Persons">5 - 8 Guests (Large Family)</option>
+              <option value="10+ Persons Group">10+ Guests (Tour Group / Sangh)</option>
             </select>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit Direct Call Button (Phone Only) */}
           <div>
-            <button
-              type="submit"
+            <a
+              href="tel:9413187706"
               className="btn btn-primary"
               style={{
                 width: "100%",
@@ -172,13 +165,17 @@ export default function QuickBookingBar() {
                 padding: "0 16px",
                 fontSize: "0.95rem",
                 borderRadius: "10px",
-                background: "linear-gradient(135deg, #059669, #047857)",
-                color: "#ffffff"
+                background: "linear-gradient(135deg, #d97706, #b45309)",
+                color: "#ffffff",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px"
               }}
             >
-              <MessageCircle size={18} />
-              <span>व्हाट्सएप पर पूछें</span>
-            </button>
+              <Phone size={18} />
+              <span>Call to Book (9413187706)</span>
+            </a>
           </div>
         </form>
       </div>

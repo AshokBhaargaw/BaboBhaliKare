@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Navigation, Phone, Train, Bus, Car, ExternalLink, Compass } from "lucide-react";
+import Link from "next/link";
 
 export default function LocationSection() {
   const mapsUrl = "https://maps.app.goo.gl/SAv4aVsNab6Z4j1Q7";
@@ -9,21 +10,21 @@ export default function LocationSection() {
     <section id="location" style={{ padding: "80px 0", background: "#fbf8f2" }}>
       <div className="container">
         
-        {/* Section Header */}
+        {/* Section Header in English */}
         <div className="section-header">
           <div className="section-badge">
             <span>📍</span>
-            <span>लोकेशन एवं कैसे पहुंचे</span>
+            <span>Location & Directions</span>
           </div>
           <h2 className="section-title">
-            धर्मशाला का सटीक पता एवं मार्ग दर्शन
+            Address, Google Map & How to Reach
           </h2>
           <p className="section-subtitle">
-            रामदेवरा में मुख्य सड़क मार्ग पर स्थित, जहां तक निजी वाहन, कार व बसें सीधे पहुंच सकती हैं।
+            Easily accessible by private cars, buses, and trains. Located on the main Ramdevra - Biramdevra Road.
           </p>
         </div>
 
-        {/* Location Grid: Details & Map */}
+        {/* Location Grid */}
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -59,10 +60,10 @@ export default function LocationSection() {
                 </div>
                 <div>
                   <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#1e293b" }}>
-                    पूर्ण पता (Full Address)
+                    Postal Address
                   </h3>
                   <div style={{ fontSize: "0.82rem", color: "#64748b" }}>
-                    बाबो भली करे सिंघवी जैन धर्मशाला
+                    Babo Bhali Kare Singhvi Jain Dharmshala
                   </div>
                 </div>
               </div>
@@ -71,31 +72,37 @@ export default function LocationSection() {
                 background: "#fffbeb",
                 border: "1px solid #fed7aa",
                 borderRadius: "14px",
-                padding: "18px",
+                padding: "20px",
                 marginBottom: "24px"
               }}>
-                <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#78350f", marginBottom: "6px" }}>
-                  बाबो भली करे सिंघवी जैन धर्मशाला
+                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#78350f", marginBottom: "6px" }}>
+                  Babo Bhali Kare Singhvi Jain Dharmshala
+                </div>
+                <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "#b45309", marginBottom: "8px" }}>
+                  (Fully-Air-Conditioned)
                 </div>
                 <p style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6 }}>
-                  रामदेवरा - बीरमदेवरा रोड,<br />
-                  ग्राम पंचायत के सामने (नोखा चौराहा के पास),<br />
-                  तहसील: पोकरण, जिला: जैसलमेर,<br />
-                  राजस्थान - 345023
+                  Near Gram Panchayat, Ramdevra - Biramdevra Road,<br />
+                  PO:- Ramdevra, Tehsil:- Pokaran,<br />
+                  District:- Jaisalmer (Rajasthan), India<br />
+                  PIN Code: <strong>345023</strong>
                 </p>
+                <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px dashed #fed7aa", fontSize: "0.85rem", color: "#64748b" }}>
+                  <strong>Management:</strong> Omprakash RajaRam Gusai
+                </div>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "24px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <Phone size={18} color="#d97706" />
-                  <span style={{ fontSize: "0.92rem", color: "#334155" }}>
-                    संपर्क व बुकिंग नंबर: <a href="tel:9413187706" style={{ fontWeight: 800, color: "#b45309" }}>9413187706</a>
+                  <span style={{ fontSize: "0.95rem", color: "#334155" }}>
+                    Direct Helpline: <a href="tel:9413187706" style={{ fontWeight: 800, color: "#b45309" }}>9413187706</a>
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <Compass size={18} color="#d97706" />
-                  <span style={{ fontSize: "0.92rem", color: "#334155" }}>
-                    मुख्य मंदिर से दूरी: <strong>मात्र 400 मीटर (5 मिनट पैदल)</strong>
+                  <span style={{ fontSize: "0.95rem", color: "#334155" }}>
+                    Distance to Main Temple: <strong>400 Meters (5 Min Walk)</strong>
                   </span>
                 </div>
               </div>
@@ -112,20 +119,21 @@ export default function LocationSection() {
                   width: "100%",
                   justifyContent: "center",
                   fontSize: "1rem",
-                  padding: "14px"
+                  padding: "14px",
+                  fontWeight: 800
                 }}
               >
                 <Navigation size={18} />
-                <span>गूगल मैप पर रास्ता देखें (Get Directions)</span>
+                <span>Get Directions on Google Maps</span>
                 <ExternalLink size={14} />
               </a>
 
               <a
                 href="tel:9413187706"
                 className="btn btn-secondary"
-                style={{ width: "100%", justifyContent: "center", fontSize: "0.92rem" }}
+                style={{ width: "100%", justifyContent: "center", fontSize: "0.95rem", padding: "12px" }}
               >
-                <Phone size={16} /> रास्ता पूछने हेतु फोन करें (9413187706)
+                <Phone size={16} /> Call for Directions: 9413187706
               </a>
             </div>
           </div>
@@ -150,7 +158,7 @@ export default function LocationSection() {
               justifyContent: "space-between"
             }}>
               <span style={{ fontWeight: 700, fontSize: "0.92rem" }}>
-                📍 Google Maps Live Location
+                📍 Google Maps Live Coordinates
               </span>
               <a
                 href={mapsUrl}
@@ -158,7 +166,7 @@ export default function LocationSection() {
                 rel="noopener noreferrer"
                 style={{ color: "#fcd34d", fontSize: "0.82rem", fontWeight: 700 }}
               >
-                बड़ा मैप खोलें ↗
+                Open in Google Maps ↗
               </a>
             </div>
 
@@ -180,7 +188,7 @@ export default function LocationSection() {
 
         {/* How to Reach Grid */}
         <h3 style={{ fontSize: "1.4rem", fontWeight: 800, color: "#1e293b", marginBottom: "20px", textAlign: "center" }}>
-          रामदेवरा कैसे पहुंचे (How to Reach)
+          How to Reach Ramdevra
         </h3>
 
         <div style={{
@@ -210,12 +218,12 @@ export default function LocationSection() {
                 <Train size={22} />
               </div>
               <div>
-                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>ट्रेन द्वारा (By Train)</h4>
-                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>रामदेवरा रेलवे स्टेशन (RDRA)</div>
+                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>By Train</h4>
+                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>Ramdevra Railway Station (RDRA)</div>
               </div>
             </div>
             <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: 1.55 }}>
-              रामदेवरा स्टेशन से धर्मशाला मात्र <strong>1.2 किमी</strong> की दूरी पर है। स्टेशन से ऑटो-रिक्शा आसानी से 5 मिनट में धर्मशाला तक छोड़ देते हैं।
+              Just <strong>1.2 km</strong> from Ramdevra Railway Station. Auto-rickshaws and battery e-rickshaws reach the Dharmshala in under 5 minutes.
             </p>
           </div>
 
@@ -241,16 +249,16 @@ export default function LocationSection() {
                 <Bus size={22} />
               </div>
               <div>
-                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>बस द्वारा (By Bus)</h4>
-                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>रामदेवरा बस स्टैंड</div>
+                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>By Bus</h4>
+                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>Ramdevra Central Bus Stand</div>
               </div>
             </div>
             <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: 1.55 }}>
-              रामदेवरा बस स्टैंड से धर्मशाला केवल <strong>600 मीटर</strong> की दूरी पर स्थित है। राजस्थान रोडवेज व प्राइवेट बसें उपलब्ध रहती हैं।
+              Only <strong>600 meters</strong> from the main bus stand. Regular state transport and private pilgrim coaches connect from all major Rajasthan and Gujarat cities.
             </p>
           </div>
 
-          {/* By Car/Taxi */}
+          {/* By Road */}
           <div style={{
             background: "#ffffff",
             borderRadius: "16px",
@@ -272,14 +280,14 @@ export default function LocationSection() {
                 <Car size={22} />
               </div>
               <div>
-                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>सड़क मार्ग (Road Distances)</h4>
-                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>प्रमुख शहरों से दूरी</div>
+                <h4 style={{ fontWeight: 800, color: "#1e293b", fontSize: "1.05rem" }}>Highway Distances</h4>
+                <div style={{ fontSize: "0.78rem", color: "#64748b" }}>Road Connectivity</div>
               </div>
             </div>
             <p style={{ fontSize: "0.88rem", color: "#475569", lineHeight: 1.55 }}>
-              पोकरण: 12 किमी | फलौदी: 60 किमी<br />
-              जैसलमेर: 120 किमी | जोधपुर: 220 किमी<br />
-              बीकानेर: 160 किमी (उत्कृष्ट नेशनल हाईवे)
+              Pokhran: 12 km | Phalodi: 60 km<br />
+              Jaisalmer: 120 km | Bikaner: 160 km<br />
+              Jodhpur: 220 km (Via smooth National Highway 11)
             </p>
           </div>
         </div>

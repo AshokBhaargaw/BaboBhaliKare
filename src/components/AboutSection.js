@@ -1,7 +1,7 @@
 "use client";
 
-import { ShieldCheck, HeartHandshake, Sparkles, MapPin, Phone, CheckCircle2 } from "lucide-react";
-import Image from "next/image";
+import { CheckCircle2, Phone, MapPin, Building, UserCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutSection({ onOpenBooking }) {
   return (
@@ -13,7 +13,7 @@ export default function AboutSection({ onOpenBooking }) {
           gap: "48px",
           alignItems: "center"
         }}>
-          {/* Left Column: Image Collage */}
+          {/* Left Column: Real Photos */}
           <div style={{ position: "relative" }}>
             <div style={{
               borderRadius: "20px",
@@ -22,13 +22,13 @@ export default function AboutSection({ onOpenBooking }) {
               border: "4px solid #fef3c7"
             }}>
               <img
-                src="/images/exterior.jpg"
-                alt="Babo Bhali Kare Singhvi Jain Dharmshala Building Ramdevra"
-                style={{ width: "100%", height: "380px", objectFit: "cover" }}
+                src="/img4.jpeg"
+                alt="Babo Bhali Kare Singhvi Jain Dharamshala Building Ramdevra"
+                style={{ width: "100%", height: "400px", objectFit: "cover" }}
               />
             </div>
 
-            {/* Overlapping Floating Badge */}
+            {/* Overlapping Small Badge with Sign */}
             <div style={{
               position: "absolute",
               bottom: "-25px",
@@ -37,7 +37,7 @@ export default function AboutSection({ onOpenBooking }) {
               color: "#ffffff",
               padding: "16px 24px",
               borderRadius: "16px",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
               border: "2px solid #fcd34d",
               display: "flex",
               alignItems: "center",
@@ -45,8 +45,8 @@ export default function AboutSection({ onOpenBooking }) {
             }}>
               <div style={{ fontSize: "2rem" }}>🚩</div>
               <div>
-                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fef3c7" }}>मंदिर से सिर्फ 400 मीटर</div>
-                <div style={{ fontSize: "0.82rem", opacity: 0.9 }}>पैदल 5 मिनट का सुगम रास्ता</div>
+                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fef3c7" }}>400m to Sacred Temple</div>
+                <div style={{ fontSize: "0.82rem", opacity: 0.9 }}>Just 5 Minutes Easy Walk</div>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function AboutSection({ onOpenBooking }) {
           <div>
             <div className="section-badge">
               <span>🙏</span>
-              <span>तीर्थ यात्रियों की सेवा में समर्पित</span>
+              <span>Dedicated Pilgrim Accommodation</span>
             </div>
 
             <h2 style={{
@@ -65,7 +65,7 @@ export default function AboutSection({ onOpenBooking }) {
               lineHeight: 1.25,
               marginBottom: "18px"
             }}>
-              बाबो भली करे सिंघवी जैन धर्मशाला में आपका स्वागत है
+              About Babo Bhali Kare Singhvi Jain Dharamshala
             </h2>
 
             <p style={{
@@ -74,10 +74,30 @@ export default function AboutSection({ onOpenBooking }) {
               color: "#475569",
               marginBottom: "16px"
             }}>
-              राजस्थान के जैसलमेर जिले की पावन तीर्थ स्थली <strong>रामदेवरा</strong> में स्थित, 
-              <strong> बाबो भली करे सिंघवी जैन धर्मशाला</strong> बाबा रामदेव जी के भक्तों, जैन तीर्थ यात्रियों 
-              तथा देश-विदेश से आने वाले परिवारों के लिए एक स्वच्छ, शांत और सुविधाजनक निवास स्थान है।
+              Located near the Gram Panchayat in <strong>Ramdevra (Tehsil Pokaran, District Jaisalmer, Rajasthan)</strong>, 
+              <strong> Babo Bhali Kare Singhvi Jain Dharamshala</strong> is dedicated to providing high-quality, fully air-conditioned, 
+              and budget-friendly stays for devotees of Lord Baba Ramdevji, Jain pilgrims, and families visiting from all across India.
             </p>
+
+            {/* Management Banner */}
+            <div style={{
+              background: "#fffbeb",
+              border: "1px solid #fed7aa",
+              borderRadius: "12px",
+              padding: "14px 18px",
+              marginBottom: "20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px"
+            }}>
+              <UserCheck size={24} color="#b45309" style={{ flexShrink: 0 }} />
+              <div style={{ fontSize: "0.88rem", color: "#78350f" }}>
+                <strong>Management by:</strong> Omprakash RajaRam Gusai<br />
+                <span style={{ fontSize: "0.82rem", color: "#64748b" }}>
+                  Shree Gusai Ashram Samiti & Shree Hari Om Ann-Kshetra Society
+                </span>
+              </div>
+            </div>
 
             <p style={{
               fontSize: "0.98rem",
@@ -85,50 +105,49 @@ export default function AboutSection({ onOpenBooking }) {
               color: "#64748b",
               marginBottom: "24px"
             }}>
-              मुख्य बाबा रामदेव जी समाधि मंदिर से मात्र 400 मीटर (5 मिनट वॉक) की दूरी पर स्थित होने के कारण 
-              वृद्धजनों, महिलाओं और बच्चों के लिए दर्शनार्थ जाना अत्यंत सुगम रहता है। धर्मशाला परिसर में 
-              स्वच्छता, शुद्ध हवा, और मारवाड़ी आतिथ्य की परंपरा का विशेष ध्यान रखा जाता है।
+              Just a 5-minute walk from the main Baba Ramdevji Samadhi Mandir, the property offers 
+              sparkling clean rooms, 24/7 hot water geysers, secure vehicle parking, and attentive service.
             </p>
 
             {/* Highlights List */}
             <div style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: "14px",
-              marginBottom: "32px"
+              gap: "12px",
+              marginBottom: "30px"
             }}>
               {[
-                "पूरी तरह स्वच्छ एवं हवादार कमरे",
-                "गर्म पानी हेतु गीज़र सुविधा",
-                "खुला व सुरक्षित वाहन पार्किंग",
-                "शुद्ध जल (RO Water) सुविधा",
-                "सज्जन एवं सहयोगी स्टाफ",
-                "परिवारों व समूहों के लिए उत्तम"
+                "Fully Air-Conditioned rooms",
+                "24/7 hot water geyser facility",
+                "Spacious & secure vehicle parking",
+                "Pure RO cold drinking water",
+                "Elevator / lift for elderly pilgrims",
+                "Pure vegetarian dining nearby"
               ].map((item, idx) => (
-                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.92rem", fontWeight: 600, color: "#334155" }}>
-                  <CheckCircle2 size={18} color="#059669" />
+                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.9rem", fontWeight: 600, color: "#334155" }}>
+                  <CheckCircle2 size={16} color="#059669" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            {/* Quick Contact & Action */}
+            {/* Quick Contact & Action (Phone Only) */}
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "16px" }}>
               <a
                 href="tel:9413187706"
                 className="btn btn-primary"
-                style={{ padding: "12px 24px" }}
+                style={{ padding: "14px 28px", fontSize: "1.05rem", fontWeight: 800 }}
               >
                 <Phone size={18} />
-                <span>सीधे संपर्क: 9413187706</span>
+                <span>Call Helpline: 9413187706</span>
               </a>
-              <button
-                onClick={onOpenBooking}
+              <Link
+                href="/contact"
                 className="btn btn-secondary"
-                style={{ padding: "12px 22px" }}
+                style={{ padding: "14px 24px", fontSize: "0.95rem" }}
               >
-                कमरे की जानकारी लें
-              </button>
+                View Contact Page
+              </Link>
             </div>
           </div>
         </div>

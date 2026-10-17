@@ -1,7 +1,7 @@
 "use client";
 
-import { Phone, MessageCircle, MapPin, Calendar, Users, ShieldCheck, CheckCircle2 } from "lucide-react";
-import Image from "next/image";
+import { Phone, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero({ onOpenBooking }) {
   return (
@@ -11,11 +11,11 @@ export default function Hero({ onOpenBooking }) {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "linear-gradient(rgba(15, 23, 42, 0.72), rgba(120, 53, 15, 0.65)), url('/images/exterior.jpg')",
+      background: "linear-gradient(rgba(15, 23, 42, 0.75), rgba(120, 53, 15, 0.7)), url('/img3.jpeg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
       color: "#ffffff",
-      padding: "60px 0 80px",
+      padding: "70px 0 90px",
     }}>
       <div className="container" style={{ position: "relative", zIndex: 2, textAlign: "center" }}>
         
@@ -24,7 +24,7 @@ export default function Hero({ onOpenBooking }) {
           display: "inline-flex",
           alignItems: "center",
           gap: "8px",
-          padding: "8px 20px",
+          padding: "8px 22px",
           background: "rgba(254, 243, 199, 0.95)",
           color: "#92400e",
           borderRadius: "9999px",
@@ -35,7 +35,7 @@ export default function Hero({ onOpenBooking }) {
           border: "1px solid #fde68a"
         }}>
           <span>🚩</span>
-          <span>बाबो भली करे • श्री बाबा रामदेव जी की पावन नगरी</span>
+          <span>Babo Bhali Kare • Holy Pilgrimage City of Ramdevra</span>
         </div>
 
         {/* Main Headings */}
@@ -44,36 +44,35 @@ export default function Hero({ onOpenBooking }) {
           fontWeight: 800,
           lineHeight: 1.15,
           marginBottom: "16px",
-          textShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
+          textShadow: "0 2px 10px rgba(0, 0, 0, 0.6)",
           color: "#ffffff"
         }}>
           Babo Bhali Kare <span style={{ color: "#fcd34d" }}>Singhvi Jain Dharmshala</span>
         </h1>
 
         <p style={{
-          fontSize: "clamp(1.1rem, 2.5vw, 1.45rem)",
+          fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
           fontWeight: 600,
           color: "#fef3c7",
           marginBottom: "20px",
-          textShadow: "0 2px 6px rgba(0, 0, 0, 0.4)"
+          textShadow: "0 2px 6px rgba(0, 0, 0, 0.5)"
         }}>
-          बाबो भली करे सिंघवी जैन धर्मशाला, रामदेवरा (पोकरण)
+          Shree Gusai Ashram Samiti • Shree Hari Om Ann-Kshetra Society • Ramdevra (Pokhran)
         </p>
 
         <p style={{
-          maxWidth: "760px",
+          maxWidth: "780px",
           margin: "0 auto 32px auto",
           fontSize: "1.05rem",
           lineHeight: 1.6,
           color: "#f1f5f9",
-          textShadow: "0 1px 4px rgba(0,0,0,0.4)"
+          textShadow: "0 1px 4px rgba(0,0,0,0.5)"
         }}>
-          श्री बाबा रामदेव जी समाधि मंदिर से मात्र <strong>400 मीटर</strong> की दूरी पर स्थित। 
-          यात्रियों व परिवारों के लिए स्वच्छ, सुरक्षित, वातानुकूलित (AC) व नॉन-AC कमरे, 
-          24 घंटे गर्म पानी, बड़ी कार पार्किंग और शांतिपूर्ण वातावरण।
+          Located near Gram Panchayat, just <strong>400 meters (5 minutes walk)</strong> from the sacred <strong>Baba Ramdevji Samadhi Mandir</strong>. 
+          Fully air-conditioned, clean, and secure family accommodation with 24/7 hot water, large vehicle parking, and warm Rajasthani hospitality.
         </p>
 
-        {/* Trust Feature Badges */}
+        {/* Feature Badges */}
         <div style={{
           display: "flex",
           flexWrap: "wrap",
@@ -83,21 +82,21 @@ export default function Hero({ onOpenBooking }) {
           margin: "0 auto 36px auto"
         }}>
           {[
-            "🚶‍♂️ मंदिर से 400 मीटर दूरी",
-            "❄️ AC एवं नॉन-AC कमरे",
-            "♨️ 24 घंटे गर्म व ठंडा पानी",
-            "🚗 निःशुल्क सुरक्षित वाहन पार्किंग",
-            "🛡️ 24x7 CCTV सुरक्षा",
-            "🍲 शुद्ध शाकाहारी भोजनालय निकट"
+            "🚶 400m from Baba Ramdev Temple",
+            "❄️ Fully Air-Conditioned Rooms",
+            "♨️ 24/7 Hot Water Geysers",
+            "🚗 Free On-Site Parking",
+            "🛡️ 24x7 CCTV Security",
+            "🍲 Pure Vegetarian Dining Nearby"
           ].map((tag, i) => (
             <span key={i} style={{
-              background: "rgba(255, 255, 255, 0.16)",
+              background: "rgba(255, 255, 255, 0.18)",
               backdropFilter: "blur(8px)",
-              padding: "6px 14px",
+              padding: "7px 16px",
               borderRadius: "30px",
               fontSize: "0.88rem",
-              fontWeight: 600,
-              border: "1px solid rgba(255, 255, 255, 0.25)",
+              fontWeight: 700,
+              border: "1px solid rgba(255, 255, 255, 0.3)",
               color: "#ffffff"
             }}>
               {tag}
@@ -105,7 +104,7 @@ export default function Hero({ onOpenBooking }) {
           ))}
         </div>
 
-        {/* Main CTA Buttons */}
+        {/* Main CTA Buttons (Phone Call Only) */}
         <div style={{
           display: "flex",
           flexWrap: "wrap",
@@ -119,65 +118,63 @@ export default function Hero({ onOpenBooking }) {
             className="btn btn-primary btn-lg pulse-button"
             style={{
               background: "linear-gradient(135deg, #f59e0b, #d97706)",
-              fontSize: "1.1rem",
-              padding: "16px 32px",
-              minWidth: "220px",
+              fontSize: "1.18rem",
+              padding: "16px 36px",
+              minWidth: "250px",
               boxShadow: "0 10px 25px rgba(217, 119, 6, 0.5)",
               border: "2px solid #fef3c7"
             }}
           >
-            <Phone size={22} />
-            <span>कॉल करें: 9413187706</span>
-          </a>
-
-          {/* WhatsApp Direct Chat */}
-          <a
-            href="https://wa.me/919413187706?text=%E0%A4%9C%E0%A4%AF%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9C%E0%A5%80%21%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%AC%E0%A5%8B%20%E0%A4%AD%E0%A4%B2%E0%A5%80%20%E0%A4%95%E0%A4%B0%E0%A5%87%20%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%98%E0%A4%B5%E0%A5%80%20%E0%A4%9C%E0%A5%88%E0%A4%A8%20%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%B0%E0%A4%BE%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B0%E0%A5%82%E0%A4%AE%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-whatsapp btn-lg"
-            style={{ fontSize: "1.1rem", padding: "16px 28px", minWidth: "220px" }}
-          >
-            <MessageCircle size={22} />
-            <span>व्हाट्सएप पर पूछें</span>
+            <Phone size={24} />
+            <span>Call Now: 9413187706</span>
           </a>
 
           {/* Book Room Modal Trigger */}
           <button
             onClick={onOpenBooking}
             className="btn btn-outline-white btn-lg"
-            style={{ fontSize: "1.05rem", padding: "16px 26px" }}
+            style={{ fontSize: "1.05rem", padding: "16px 30px" }}
           >
-            ऑनलाइन कमरा इंक्वायरी
+            Book Room Inquiry
           </button>
+
+          {/* Contact Page Link */}
+          <Link
+            href="/contact"
+            className="btn btn-secondary btn-lg"
+            style={{ fontSize: "1.05rem", padding: "16px 28px", borderColor: "#f59e0b", color: "#92400e" }}
+          >
+            <span>Contact Details</span>
+            <ArrowRight size={18} />
+          </Link>
         </div>
 
-        {/* Quick Location & Direct Maps Pill */}
+        {/* Location & Direct Maps Link */}
         <div style={{
           display: "inline-flex",
           alignItems: "center",
           gap: "10px",
-          background: "rgba(0, 0, 0, 0.45)",
+          background: "rgba(0, 0, 0, 0.5)",
           backdropFilter: "blur(6px)",
-          padding: "10px 20px",
+          padding: "10px 22px",
           borderRadius: "50px",
-          fontSize: "0.9rem",
+          fontSize: "0.92rem",
           color: "#f1f5f9"
         }}>
           <MapPin size={16} color="#fbbf24" />
-          <span>रामदेवरा - बीरमदेवरा रोड (ग्राम पंचायत के सामने), रामदेवरा, राजस्थान 345023</span>
+          <span>Near Gram Panchayat, PO: Ramdevra, Teh: Pokaran, Dist: Jaisalmer (Rajasthan) - 345023</span>
           <a
             href="https://maps.app.goo.gl/SAv4aVsNab6Z4j1Q7"
             target="_blank"
             rel="noopener noreferrer"
             style={{
               color: "#fcd34d",
-              fontWeight: 700,
+              fontWeight: 800,
               textDecoration: "underline",
               marginLeft: "6px"
             }}
           >
-            गूगल मैप खोलें ↗
+            View on Google Maps ↗
           </a>
         </div>
 

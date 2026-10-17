@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, Phone, MessageCircle, Calendar, Users, Home, CheckCircle2 } from "lucide-react";
+import { X, Phone, Calendar, Users, Home, CheckCircle2 } from "lucide-react";
 
 export default function BookingModal({ isOpen, onClose }) {
   const [name, setName] = useState("");
@@ -12,25 +12,13 @@ export default function BookingModal({ isOpen, onClose }) {
   const [guests, setGuests] = useState("2 Persons");
   const [roomsCount, setRoomsCount] = useState("1 Room");
   const [notes, setNotes] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmitWhatsApp = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const text = encodeURIComponent(
-      `🚩 *बाबो भली करे सिंघवी जैन धर्मशाला - बुकिंग इंक्वायरी*\n\n` +
-      `👤 *यात्री का नाम:* ${name || "अतिथि"}\n` +
-      `📞 *मोबाइल नंबर:* ${phone || "उपलब्ध नहीं"}\n` +
-      `📅 *चेक-इन:* ${checkIn || "जल्द"}\n` +
-      `📅 *चेक-आउट:* ${checkOut || "1 दिन"}\n` +
-      `🛏️ *रूम प्रकार:* ${roomType}\n` +
-      `🚪 *कमरों की संख्या:* ${roomsCount}\n` +
-      `👥 *यात्रियों की संख्या:* ${guests}\n` +
-      (notes ? `📝 *विशेष अनुरोध:* ${notes}\n` : "") +
-      `\nकृपया कमरा उपलब्धता व किराया कन्फर्म करें। धन्यवाद!`
-    );
-    window.open(`https://wa.me/919413187706?text=${text}`, "_blank");
-    onClose();
+    setSubmitted(true);
   };
 
   return (
@@ -75,10 +63,10 @@ export default function BookingModal({ isOpen, onClose }) {
         }}>
           <div>
             <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#fef3c7" }}>
-              कमरा आरक्षण / इंक्वायरी
+              Room Booking Inquiry
             </div>
             <div style={{ fontSize: "0.82rem", opacity: 0.9 }}>
-              बाबो भली करे सिंघवी जैन धर्मशाला • रामदेवरा
+              Babo Bhali Kare Singhvi Jain Dharamshala • Ramdevra
             </div>
           </div>
           <button
@@ -99,212 +87,248 @@ export default function BookingModal({ isOpen, onClose }) {
         </div>
 
         {/* Modal Body */}
-        <form onSubmit={handleSubmitWhatsApp} style={{ padding: "24px" }}>
+        <div style={{ padding: "24px" }}>
           
-          {/* Quick Call Strip */}
+          {/* Prominent Direct Call Banner */}
           <div style={{
             background: "#fffbeb",
-            border: "1px solid #fed7aa",
-            borderRadius: "12px",
-            padding: "12px 16px",
+            border: "2px solid #f59e0b",
+            borderRadius: "14px",
+            padding: "16px 20px",
             marginBottom: "20px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "10px"
+            textAlign: "center"
           }}>
-            <div style={{ fontSize: "0.86rem", color: "#78350f" }}>
-              तत्काल कमरे हेतु सीधे कॉल करें:
+            <div style={{ fontSize: "0.85rem", color: "#78350f", fontWeight: 700, marginBottom: "4px" }}>
+              Direct Booking Helpline (Instant Confirmation):
             </div>
             <a
               href="tel:9413187706"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "6px",
-                fontWeight: 800,
+                justifyContent: "center",
+                gap: "8px",
+                fontWeight: 900,
                 color: "#b45309",
-                fontSize: "0.95rem"
+                fontSize: "1.7rem",
+                textDecoration: "none"
               }}
             >
-              <Phone size={15} /> 9413187706
+              <Phone size={24} /> 9413187706
             </a>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                आपका नाम (Full Name)
-              </label>
-              <input
-                type="text"
-                placeholder="उदा. राहुल शर्मा"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.9rem",
-                  outline: "none"
-                }}
-              />
-            </div>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                मोबाइल नंबर (Phone)
-              </label>
-              <input
-                type="tel"
-                placeholder="10 अंकों का मोबाइल"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.9rem",
-                  outline: "none"
-                }}
-              />
+            <div style={{ fontSize: "0.78rem", color: "#64748b", marginTop: "2px" }}>
+              Manager: Omprakash RajaRam Gusai
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                चेक-इन तारीख
-              </label>
-              <input
-                type="date"
-                value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.9rem",
-                  outline: "none"
-                }}
-              />
-            </div>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                चेक-आउट तारीख
-              </label>
-              <input
-                type="date"
-                value={checkOut}
-                onChange={(e) => setCheckOut(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.9rem",
-                  outline: "none"
-                }}
-              />
-            </div>
-          </div>
+          {!submitted ? (
+            <form onSubmit={handleSubmit}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Rahul Sharma"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.9rem",
+                      outline: "none"
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="10-digit mobile"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.9rem",
+                      outline: "none"
+                    }}
+                  />
+                </div>
+              </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                कमरे का प्रकार
-              </label>
-              <select
-                value={roomType}
-                onChange={(e) => setRoomType(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.88rem",
-                  outline: "none",
-                  background: "#ffffff"
-                }}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Check-in Date
+                  </label>
+                  <input
+                    type="date"
+                    value={checkIn}
+                    onChange={(e) => setCheckIn(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.9rem",
+                      outline: "none"
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Check-out Date
+                  </label>
+                  <input
+                    type="date"
+                    value={checkOut}
+                    onChange={(e) => setCheckOut(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.9rem",
+                      outline: "none"
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Room Category
+                  </label>
+                  <select
+                    value={roomType}
+                    onChange={(e) => setRoomType(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.88rem",
+                      outline: "none",
+                      background: "#ffffff"
+                    }}
+                  >
+                    <option value="Deluxe AC Room (2-Bed)">Deluxe AC Room (2-Bed)</option>
+                    <option value="Standard Non-AC Room (2-Bed)">Standard Non-AC Room (2-Bed)</option>
+                    <option value="Super Deluxe Family AC (4-Bed)">Super Deluxe Family AC (4-Bed)</option>
+                    <option value="Yatri Sangh Group Hall / Dormitory">Group Hall / Dormitory</option>
+                  </select>
+                </div>
+                <div>
+                  <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                    Guests Count
+                  </label>
+                  <select
+                    value={guests}
+                    onChange={(e) => setGuests(e.target.value)}
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #cbd5e1",
+                      fontSize: "0.88rem",
+                      outline: "none",
+                      background: "#ffffff"
+                    }}
+                  >
+                    <option value="1-2 Guests">1 - 2 Guests</option>
+                    <option value="3-4 Guests">3 - 4 Guests</option>
+                    <option value="5-8 Guests">5 - 8 Guests</option>
+                    <option value="10+ Guests">10+ Guests (Group / Sangh)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
+                  Special Note or Arrival Time (Optional)
+                </label>
+                <textarea
+                  rows={2}
+                  placeholder="e.g. Ground floor preferred, late night train arrival..."
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "10px 12px",
+                    borderRadius: "8px",
+                    border: "1px solid #cbd5e1",
+                    fontSize: "0.88rem",
+                    outline: "none",
+                    fontFamily: "inherit",
+                    resize: "vertical"
+                  }}
+                />
+              </div>
+
+              {/* Action Buttons (Phone Only) */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                <button
+                  type="submit"
+                  className="btn btn-secondary"
+                  style={{ width: "100%", justifyContent: "center", padding: "13px", fontSize: "0.95rem", borderColor: "#f59e0b", color: "#92400e" }}
+                >
+                  Save Inquiry & Proceed to Call
+                </button>
+
+                <a
+                  href="tel:9413187706"
+                  className="btn btn-primary"
+                  style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "1.05rem", fontWeight: 800 }}
+                >
+                  <Phone size={20} />
+                  <span>Call Directly: 9413187706</span>
+                </a>
+              </div>
+            </form>
+          ) : (
+            <div style={{ textAlign: "center", padding: "20px 0" }}>
+              <div style={{
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                background: "#dcfce7",
+                color: "#15803d",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 16px auto"
+              }}>
+                <CheckCircle2 size={36} />
+              </div>
+              <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#1e293b", marginBottom: "8px" }}>
+                Thank you, {name || "Pilgrim"}!
+              </h3>
+              <p style={{ fontSize: "0.95rem", color: "#64748b", marginBottom: "24px", lineHeight: 1.6 }}>
+                Your room request details have been recorded. Please dial our manager below to immediately confirm room allocation:
+              </p>
+              <a
+                href="tel:9413187706"
+                className="btn btn-primary pulse-button"
+                style={{ width: "100%", justifyContent: "center", padding: "16px", fontSize: "1.15rem", fontWeight: 900 }}
               >
-                <option value="Deluxe AC Room (2-Bed)">डीलक्स AC कमरा (2 बेड)</option>
-                <option value="Standard Non-AC Room (2-Bed)">नॉन-AC कमरा (2 बेड)</option>
-                <option value="Super Deluxe Family AC (4-Bed)">फैमिली सुइट AC (4 बेड)</option>
-                <option value="Yatri Group Hall / Dormitory">यात्री संघ हॉल / ग्रुप स्टे</option>
-              </select>
+                <Phone size={22} />
+                <span>Call Now: 9413187706</span>
+              </a>
             </div>
-            <div>
-              <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-                कुल यात्री
-              </label>
-              <select
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
-                style={{
-                  width: "100%",
-                  padding: "10px 12px",
-                  borderRadius: "8px",
-                  border: "1px solid #cbd5e1",
-                  fontSize: "0.88rem",
-                  outline: "none",
-                  background: "#ffffff"
-                }}
-              >
-                <option value="1-2 Persons">1 - 2 व्यक्ति</option>
-                <option value="3-4 Persons">3 - 4 व्यक्ति</option>
-                <option value="5-8 Persons">5 - 8 व्यक्ति</option>
-                <option value="10+ Persons Group">10+ व्यक्ति (बड़ा समूह)</option>
-              </select>
-            </div>
-          </div>
+          )}
 
-          <div style={{ marginBottom: "20px" }}>
-            <label style={{ display: "block", fontSize: "0.82rem", fontWeight: 700, color: "#475569", marginBottom: "5px" }}>
-              कोई विशेष आवश्यकता / संदेश (वैकल्पिक)
-            </label>
-            <textarea
-              rows={2}
-              placeholder="उदा. ग्राउंड फ्लोर पर कमरा चाहिए, देर रात पहुंचेंगे..."
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "10px 12px",
-                borderRadius: "8px",
-                border: "1px solid #cbd5e1",
-                fontSize: "0.88rem",
-                outline: "none",
-                fontFamily: "inherit",
-                resize: "vertical"
-              }}
-            />
-          </div>
-
-          {/* Action Buttons */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <button
-              type="submit"
-              className="btn btn-whatsapp"
-              style={{ width: "100%", justifyContent: "center", padding: "14px", fontSize: "1rem" }}
-            >
-              <MessageCircle size={20} />
-              <span>व्हाट्सएप पर बुकिंग इंक्वायरी भेजें</span>
-            </button>
-
-            <a
-              href="tel:9413187706"
-              className="btn btn-primary"
-              style={{ width: "100%", justifyContent: "center", padding: "12px", fontSize: "0.95rem" }}
-            >
-              <Phone size={18} />
-              <span>कॉल पर बात करें: 9413187706</span>
-            </a>
-          </div>
-
-        </form>
+        </div>
       </div>
     </div>
   );

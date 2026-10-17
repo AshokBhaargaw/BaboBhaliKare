@@ -60,7 +60,7 @@ export default function Home() {
       {/* Footer */}
       <Footer onOpenBooking={openBooking} />
 
-      {/* Sticky Mobile Action Bar for Phone & WhatsApp */}
+      {/* Sticky Mobile Action Bar for Phone Calling */}
       <MobileBottomBar onOpenBooking={openBooking} />
 
       {/* Booking Dialog Modal */}

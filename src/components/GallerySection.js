@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Camera, ZoomIn, Eye } from "lucide-react";
+import { Camera, ZoomIn } from "lucide-react";
 
 export default function GallerySection() {
   const [activeTab, setActiveTab] = useState("all");
@@ -11,37 +11,58 @@ export default function GallerySection() {
     {
       id: 1,
       category: "building",
-      src: "/images/exterior.jpg",
-      title: "धर्मशाला का भव्य बाहरी स्वरूप",
-      desc: "पारंपरिक राजस्थानी नक्काशीदार बलुआ पत्थर का विशाल भवन व खुला प्रांगण"
+      src: "/img3.jpeg",
+      title: "Main Dharamshala Building",
+      desc: "Full view of Babo Bhali Kare Singhvi (Jain) Dharamshala with pilgrims and entrance"
     },
     {
       id: 2,
-      category: "rooms",
-      src: "/images/room-ac.jpg",
-      title: "डीलक्स AC कमरा (Deluxe Room)",
-      desc: "साफ-सुथरे आरामदायक बेड, वातानुकूलित एवं प्राकृतिक रोशनी से भरपूर"
+      category: "building",
+      src: "/img4.jpeg",
+      title: "Festival & Pilgrimage Season",
+      desc: "Festive decorations and devotees during Ramdevra pilgrimage fair"
     },
     {
       id: 3,
-      category: "rooms",
-      src: "/images/room-family.jpg",
-      title: "फैमिली सुइट एवं ग्रुप हॉल",
-      desc: "बड़े परिवारों और तीर्थ यात्रियों के विश्राम हेतु विशाल पारिवारिक कक्ष"
+      category: "building",
+      src: "/img1.jpeg",
+      title: "Official Entrance Signboard",
+      desc: "Prominent 3D signage of Babo Bhali Kare Singhvi (Jain) Dharamshala"
     },
     {
       id: 4,
-      category: "temple",
-      src: "/images/ramdevra-mandir.jpg",
-      title: "श्री बाबा रामदेव जी समाधि मंदिर",
-      desc: "मात्र 400 मीटर की दूरी पर स्थित बाबा रामसापीर का पावन समाधि स्थल"
+      category: "card",
+      src: "/img2.jpeg",
+      title: "Official Trust Card & Helpline",
+      desc: "Managed by Omprakash RajaRam Gusai - Mobile: 09413187706"
     },
     {
       id: 5,
+      category: "rooms",
+      src: "/images/room-ac.jpg",
+      title: "Deluxe Air-Conditioned Room",
+      desc: "Clean twin beds, fresh white linens, air conditioning and attached bathroom"
+    },
+    {
+      id: 6,
+      category: "rooms",
+      src: "/images/room-family.jpg",
+      title: "Super Deluxe Family Room",
+      desc: "Spacious multi-bed suite ideal for pilgrim families and elders"
+    },
+    {
+      id: 7,
+      category: "temple",
+      src: "/images/ramdevra-mandir.jpg",
+      title: "Baba Ramdevji Samadhi Mandir",
+      desc: "Holy shrine of Lord Baba Ramdevji located just 400 meters away"
+    },
+    {
+      id: 8,
       category: "dining",
       src: "/images/bhojanshala.jpg",
-      title: "शुद्ध सात्विक भोजनशाला",
-      desc: "यात्रियों के लिए स्वच्छ, पौष्टिक व सात्विक मारवाड़ी एवं जैन भोजन व्यवस्था"
+      title: "Pure Vegetarian Bhojanshala",
+      desc: "Hygienic and satvik dining facilities available for pilgrims"
     }
   ];
 
@@ -51,17 +72,17 @@ export default function GallerySection() {
     <section id="gallery" style={{ padding: "80px 0", background: "#ffffff" }}>
       <div className="container">
         
-        {/* Header */}
+        {/* Header in English */}
         <div className="section-header">
           <div className="section-badge">
             <span>📸</span>
-            <span>तस्वीरें एवं झलकियां</span>
+            <span>Real Photo Showcase</span>
           </div>
           <h2 className="section-title">
-            धर्मशाला परिसर एवं कमरों की फोटो गैलरी
+            Dharamshala Premises & Photo Gallery
           </h2>
           <p className="section-subtitle">
-            ठहरने से पहले देखें हमारे स्वच्छ कमरे, धर्मशाला का भव्य भवन, भोजनशाला एवं बाबा रामदेव जी समाधि मंदिर के दृश्य।
+            Authentic photographs of the building, official signage, guest rooms, and surroundings in Ramdevra.
           </p>
 
           {/* Filter Tabs */}
@@ -77,11 +98,11 @@ export default function GallerySection() {
             border: "1px solid #e2e8f0"
           }}>
             {[
-              { id: "all", label: "सभी फोटो (All)" },
-              { id: "rooms", label: "कमरे (Rooms)" },
-              { id: "building", label: "परिसर (Building)" },
-              { id: "dining", label: "भोजनशाला (Dining)" },
-              { id: "temple", label: "मंदिर (Temple)" },
+              { id: "all", label: "All Photos" },
+              { id: "building", label: "Building & Premises" },
+              { id: "rooms", label: "Guest Rooms" },
+              { id: "card", label: "Trust Card" },
+              { id: "temple", label: "Temple & Surroundings" }
             ].map(tab => (
               <button
                 key={tab.id}
@@ -105,7 +126,7 @@ export default function GallerySection() {
         {/* Gallery Grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "24px"
         }}>
           {filteredItems.map(item => (
@@ -135,12 +156,12 @@ export default function GallerySection() {
                 <img
                   src={item.src}
                   alt={item.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
                 <div style={{
                   position: "absolute",
                   inset: 0,
-                  background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)",
+                  background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%)",
                   display: "flex",
                   alignItems: "flex-end",
                   padding: "16px"
@@ -177,7 +198,7 @@ export default function GallerySection() {
             <div
               onClick={e => e.stopPropagation()}
               style={{
-                maxWidth: "900px",
+                maxWidth: "850px",
                 width: "100%",
                 background: "#ffffff",
                 borderRadius: "16px",
@@ -188,7 +209,7 @@ export default function GallerySection() {
               <img
                 src={selectedImage.src}
                 alt={selectedImage.title}
-                style={{ width: "100%", maxHeight: "75vh", objectFit: "cover" }}
+                style={{ width: "100%", maxHeight: "75vh", objectFit: "contain", background: "#000" }}
               />
               <div style={{ padding: "20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
@@ -204,7 +225,7 @@ export default function GallerySection() {
                   className="btn btn-secondary"
                   style={{ padding: "8px 18px", fontSize: "0.9rem" }}
                 >
-                  बंद करें (Close)
+                  Close
                 </button>
               </div>
             </div>
