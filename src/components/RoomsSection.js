@@ -102,7 +102,7 @@ export default function RoomsSection({ onOpenBooking }) {
           </h2>
           <p className="section-subtitle">
             Experience clean, peaceful, and budget-friendly stay options at Babo Bhali Kare Dharmshala in Ramdevra. 
-            Choose from AC Deluxe, Standard Non-AC, Family Suites, and Group Dormitories just 400m from Baba Ramdev Temple. 
+            Choose from AC Deluxe, Standard Non-AC, Family Suites, and Group Dormitories just 200m from Baba Ramdev Temple. 
             For direct phone reservations, call <strong>9413187706</strong>.
           </p>
 

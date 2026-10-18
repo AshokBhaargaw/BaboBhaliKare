@@ -7,7 +7,7 @@ export default function TempleGuideSection() {
     {
       name: "Shree Baba Ramdevji Samadhi Mandir",
       nameEn: "Main Temple (Runicha Dham)",
-      distance: "400 meters (5 min walk)",
+      distance: "200 meters (2-3 min walk)",
       desc: "The sacred living samadhi of Lord Baba Ramdevji (Ramapir). Devotees from all over India visit to seek divine blessings and offer prayers.",
       highlight: "Main Sacred Shrine",
       icon: "🚩"
@@ -75,7 +75,7 @@ export default function TempleGuideSection() {
             Ramdevra Sacred Shrines & Temple Guide
           </h2>
           <p className="section-subtitle">
-            Staying at Babo Bhali Kare Dharmshala in Ramdevra places you just 400 meters from Baba Ramdev Temple and within easy walking distance of all sacred pilgrimage destinations.
+            Staying at Babo Bhali Kare Dharmshala in Ramdevra places you just 200 meters from Baba Ramdev Temple and within easy walking distance of all sacred pilgrimage destinations.
           </p>
         </div>
 
@@ -115,10 +115,10 @@ export default function TempleGuideSection() {
                 justifyContent: "space-between"
               }}>
                 <span style={{ fontWeight: 700, fontSize: "0.95rem" }}>
-                  📍 Walking Distance: 400 Meters
+                  📍 Walking Distance: 200 Meters
                 </span>
                 <span style={{ color: "#fcd34d", fontSize: "0.85rem", fontWeight: 700 }}>
-                  5 Min Walk
+                  2-3 Min Walk
                 </span>
               </div>
             </div>

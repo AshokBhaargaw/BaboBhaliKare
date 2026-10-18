@@ -45,8 +45,8 @@ export default function AboutSection({ onOpenBooking }) {
             }}>
               <div style={{ fontSize: "2rem" }}>🚩</div>
               <div>
-                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fef3c7" }}>400m to Sacred Temple</div>
-                <div style={{ fontSize: "0.82rem", opacity: 0.9 }}>Just 5 Minutes Easy Walk</div>
+                <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#fef3c7" }}>200m to Sacred Temple</div>
+                <div style={{ fontSize: "0.82rem", opacity: 0.9 }}>Just 2-3 Minutes Easy Walk</div>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function AboutSection({ onOpenBooking }) {
               color: "#64748b",
               marginBottom: "24px"
             }}>
-              Just a 5-minute walk from the main Baba Ramdevji Samadhi Mandir, the property offers 
+              Just a 2-3 minute walk from the main Baba Ramdevji Samadhi Mandir, the property offers 
               sparkling clean rooms, 24/7 hot water geysers, secure vehicle parking, and attentive service.
             </p>
 

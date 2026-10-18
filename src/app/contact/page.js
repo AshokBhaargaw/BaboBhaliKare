@@ -273,7 +273,7 @@ export default function ContactPage() {
                     Key Distances:
                   </div>
                   <div style={{ fontSize: "0.9rem", color: "#475569" }}>
-                    • Baba Ramdev Temple: <strong>400 meters (5 min walk)</strong><br />
+                    • Baba Ramdev Temple: <strong>200 meters (2-3 min walk)</strong><br />
                     • Ramdevra Bus Stand: <strong>600 meters</strong><br />
                     • Ramdevra Railway Station: <strong>1.2 km</strong>
                   </div>

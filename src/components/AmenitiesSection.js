@@ -18,8 +18,8 @@ export default function AmenitiesSection() {
   const amenities = [
     {
       icon: <MapPin size={26} color="#d97706" />,
-      title: "400m to Temple",
-      desc: "Only a 5-minute direct walking distance to the sacred Baba Ramdevji Samadhi Mandir."
+      title: "200m to Temple",
+      desc: "Only a 2-3 minute direct walking distance to the sacred Baba Ramdevji Samadhi Mandir."
     },
     {
       icon: <Flame size={26} color="#d97706" />,

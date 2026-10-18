@@ -55,7 +55,7 @@ export default function GallerySection() {
       category: "temple",
       src: "/images/ramdevra-mandir.jpg",
       title: "Baba Ramdevji Samadhi Mandir",
-      desc: "Holy shrine of Lord Baba Ramdevji located just 400 meters away"
+      desc: "Holy shrine of Lord Baba Ramdevji located just 200 meters away"
     },
     {
       id: 8,

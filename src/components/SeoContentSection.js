@@ -7,7 +7,7 @@ export default function SeoContentSection({ onOpenBooking }) {
   const highlights = [
     {
       title: "Prime Proximity to Mandir",
-      desc: "Located just 400 meters (5 minutes walking distance) from Baba Ramdevji Samadhi Mandir, making it effortless for early morning Mangla Aarti and evening Sandhya Aarti.",
+      desc: "Located just 200 meters (2-3 minutes walking distance) from Baba Ramdevji Samadhi Mandir, making it effortless for early morning Mangla Aarti and evening Sandhya Aarti.",
       icon: "🚩"
     },
     {
@@ -132,7 +132,7 @@ export default function SeoContentSection({ onOpenBooking }) {
               </h3>
               <p style={{ fontSize: "0.94rem", color: "#451a03", lineHeight: 1.7, marginBottom: "16px" }}>
                 यदि आप बाबा रामदेवजी के दर्शन हेतु रामदेवरा (पोकरण, जैसलमेर) आ रहे हैं और एक सुरक्षित, स्वच्छ व परिवार के अनुकूल <strong>धर्मशाला (Dharmshala in Ramdevra)</strong> की तलाश में हैं, तो <strong>बाबो भली करे सिंघवी जैन धर्मशाला</strong> आपके लिए सर्वश्रेष्ठ विकल्प है। 
-                मंदिर से मात्र 400 मीटर की दूरी पर स्थित यह धर्मशाला वातानुकूलित (AC) कमरे, गरम पानी, वरिष्ठ नागरिकों के लिए लिफ्ट और विशाल कार/बस पार्किंग उपलब्ध कराती है।
+                मंदिर से मात्र 200 मीटर की दूरी पर स्थित यह धर्मशाला वातानुकूलित (AC) कमरे, गरम पानी, वरिष्ठ नागरिकों के लिए लिफ्ट और विशाल कार/बस पार्किंग उपलब्ध कराती है।
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
                 <a
@@ -163,7 +163,7 @@ export default function SeoContentSection({ onOpenBooking }) {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "10px", fontSize: "0.9rem" }}>
                 <li style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #e2e8f0", paddingBottom: "8px" }}>
                   <span style={{ color: "#64748b" }}>Distance to Mandir:</span>
-                  <strong style={{ color: "#0f172a" }}>400 Meters (5 Mins)</strong>
+                  <strong style={{ color: "#0f172a" }}>200 Meters (2-3 Mins)</strong>
                 </li>
                 <li style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #e2e8f0", paddingBottom: "8px" }}>
                   <span style={{ color: "#64748b" }}>Railway Station:</span>

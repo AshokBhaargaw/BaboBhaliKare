@@ -20,7 +20,7 @@ export default function LocationSection() {
             Address, Google Map & How to Reach Dharmshala in Ramdevra
           </h2>
           <p className="section-subtitle">
-            Easily accessible by private cars, buses, and trains. Located near Gram Panchayat on the main Ramdevra - Biramdevra Road, just 400m from Baba Ramdevji Samadhi Mandir.
+            Easily accessible by private cars, buses, and trains. Located near Gram Panchayat on the main Ramdevra - Biramdevra Road, just 200m from Baba Ramdevji Samadhi Mandir.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function LocationSection() {
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <Compass size={18} color="#d97706" />
                   <span style={{ fontSize: "0.95rem", color: "#334155" }}>
-                    Distance to Main Temple: <strong>400 Meters (5 Min Walk)</strong>
+                    Distance to Main Temple: <strong>200 Meters (2-3 Min Walk)</strong>
                   </span>
                 </div>
               </div>

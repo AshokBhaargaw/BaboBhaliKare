@@ -9,11 +9,11 @@ export default function FaqSection() {
   const faqs = [
     {
       q: "Which is the best dharmshala in Ramdevra near Baba Ramdev temple?",
-      a: "Babo Bhali Kare Singhvi Jain Dharamshala is one of the top-rated dharmshalas in Ramdevra. Located just 400 meters (5 minutes walk) from the main Baba Ramdevji Samadhi Mandir, it offers sparkling clean AC and Non-AC family rooms, 24/7 hot water, secure car/bus parking, lift for elders, and pure vegetarian dining nearby."
+      a: "Babo Bhali Kare Singhvi Jain Dharamshala is one of the top-rated dharmshalas in Ramdevra. Located just 200 meters (2-3 minutes walk) from the main Baba Ramdevji Samadhi Mandir, it offers sparkling clean AC and Non-AC family rooms, 24/7 hot water, secure car/bus parking, lift for elders, and pure vegetarian dining nearby."
     },
     {
       q: "How far is Babo Bhali Kare Dharamshala from the main Baba Ramdev Temple?",
-      a: "The Dharamshala is located approximately 400 meters from the sacred Baba Ramdevji Samadhi Mandir. It takes just 4 to 5 minutes on foot via a direct, paved street, making it very comfortable for senior citizens and families."
+      a: "The Dharamshala is located approximately 200 meters from the sacred Baba Ramdevji Samadhi Mandir. It takes just 2 to 3 minutes on foot via a direct, paved street, making it very comfortable for senior citizens and families."
     },
     {
       q: "How can I book a room in dharmshala in Ramdevra in advance?",

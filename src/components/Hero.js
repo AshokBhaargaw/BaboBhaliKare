@@ -78,7 +78,7 @@ export default function Hero({ onOpenBooking }) {
           textShadow: "0 1px 4px rgba(0,0,0,0.5)"
         }}>
           Looking for a clean, comfortable, and peaceful <strong>dharmshala in Ramdevra</strong>? 
-          Located near Gram Panchayat, just <strong>400 meters (5 minutes walk)</strong> from the sacred <strong>Baba Ramdevji Samadhi Mandir</strong>. 
+          Located near Gram Panchayat, just <strong>200 meters (2-3 minutes walk)</strong> from the sacred <strong>Baba Ramdevji Samadhi Mandir</strong>. 
           Enjoy fully air-conditioned AC and Non-AC family rooms, 24/7 hot water geysers, secure car/bus parking, elevator for seniors, and warm Rajasthani hospitality.
         </p>
 
@@ -92,7 +92,7 @@ export default function Hero({ onOpenBooking }) {
           margin: "0 auto 36px auto"
         }}>
           {[
-            "🚶 400m from Baba Ramdev Temple",
+            "🚶 200m from Baba Ramdev Temple",
             "❄️ Fully Air-Conditioned Rooms",
             "♨️ 24/7 Hot Water Geysers",
             "🚗 Free On-Site Parking",

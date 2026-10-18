@@ -40,7 +40,7 @@ export default function Navbar({ onOpenBooking }) {
               🙏 <strong>Babo Bhali Kare</strong> | Holy Pilgrimage of Ramdevra, Rajasthan
             </span>
             <span style={{ display: "none", opacity: 0.85 }} className="desktop-tagline">
-              • Just 400m from Baba Ramdev Temple
+              • Just 200m from Baba Ramdev Temple
             </span>
           </div>
 

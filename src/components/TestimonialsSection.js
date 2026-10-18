@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
       stay: "Family 3-Day Pilgrimage",
       rating: 5,
       date: "Recent Stay",
-      comment: "Best dharamshala experience in Ramdevra! Just a 5-minute walk to Baba Ramdevji temple. The AC rooms are spotless and the 24-hour hot water geyser worked perfectly. The staff was polite and helpful."
+      comment: "Best dharamshala experience in Ramdevra! Just a 2-minute walk to Baba Ramdevji temple. The AC rooms are spotless and the 24-hour hot water geyser worked perfectly. The staff was polite and helpful."
     },
     {
       name: "Rajesh Patel (Surat)",

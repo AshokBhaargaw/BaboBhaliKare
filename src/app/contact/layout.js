@@ -2,7 +2,7 @@ import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Book Dharmshala in Ramdevra | Contact Babo Bhali Kare Singhvi Jain Dharamshala",
-  description: "Official contact & room reservation helpline for Babo Bhali Kare Singhvi Jain Dharmshala in Ramdevra (Pokhran). Clean AC and Non-AC family rooms, 400m from Baba Ramdev Temple. Call: 9413187706.",
+  description: "Official contact & room reservation helpline for Babo Bhali Kare Singhvi Jain Dharmshala in Ramdevra (Pokhran). Clean AC and Non-AC family rooms, 200m from Baba Ramdev Temple. Call: 9413187706.",
   keywords: [
     "Ramdevra dharmshala booking",
     "Ramdevra dharamshala contact number",
@@ -18,7 +18,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Book Dharmshala in Ramdevra | Babo Bhali Kare Contact & Helpline",
-    description: "Call 9413187706 for instant room booking at Babo Bhali Kare Singhvi Jain Dharmshala, located 400m from Baba Ramdevji Samadhi Mandir, Ramdevra.",
+    description: "Call 9413187706 for instant room booking at Babo Bhali Kare Singhvi Jain Dharmshala, located 200m from Baba Ramdevji Samadhi Mandir, Ramdevra.",
     url: `${SITE_URL}/contact`,
     siteName: "Babo Bhali Kare Dharmshala Ramdevra",
     images: [
